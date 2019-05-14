@@ -21,5 +21,6 @@ public class Datum {
 	public String getDatumAsString() {
 		// TODO
 		return "";
+
 		}
 }

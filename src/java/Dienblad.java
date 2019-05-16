@@ -1,6 +1,5 @@
-git import java.util.ArrayList;
+import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.Stack;
 
 public class Dienblad {
     private ArrayList<Artikel> artikelen;
@@ -10,11 +9,11 @@ public class Dienblad {
      * Constructor
      */
     public Dienblad() {
-        artikelen = new ArrayList<Artikel>();
+        artikelen = new ArrayList<>();
     }
 
     public Dienblad(Persoon klant){
-        artikelen = new Arraylist<Artikel>();
+        artikelen = new ArrayList<>();
         this.klant = klant;
     }
 
@@ -43,10 +42,10 @@ public class Dienblad {
      * @return De totaalprijs
      */
     public double getTotaalPrijs() {
-        Iterator it = artikelen.iterator();
+        Iterator<Artikel> it = artikelen.iterator();
         int totaalprijs = 0;
         while (it.hasNext()){
-            totaalprijs+=it.next().getPrijs();
+            totaalprijs+=it.next().getPrice();
         }
         return totaalprijs;
     }

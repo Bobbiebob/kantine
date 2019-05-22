@@ -19,7 +19,7 @@ public class Datum {
 		jaar = 0;
 	}
 
-	private boolean bestaatDatum(int dag, int maand, int jaar){
+	public boolean bestaatDatum(int dag, int maand, int jaar){
 		if((dag >= 1 && dag <= 31) && (maand >= 1 && maand <= 12) && (jaar >= 1900 && jaar <= 2100)){
 			if(((dag <= 30 && maand == 4) ||(dag <= 30 && maand == 6) ||(dag <= 30 && maand == 9) ||(dag <= 30 && maand == 8) ||(dag <= 30 && maand == 11))){
 				return true;

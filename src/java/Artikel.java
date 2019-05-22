@@ -1,8 +1,8 @@
 public class Artikel{
 	private String name;
-	private float price;
+	private double price;
 
-	public Artikel(String name, float price) {
+	public Artikel(String name, double price) {
 		this.name = name;
 		this.price = price;
 
@@ -23,7 +23,7 @@ public class Artikel{
 		this.name = name;
 	}
 
-	public float getPrice() {
+	public double getPrice() {
 		return price;
 	}
 

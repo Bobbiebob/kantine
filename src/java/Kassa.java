@@ -60,5 +60,6 @@ public class Kassa {
     public void resetKassa() {
         geldInKassa-=totaalToegevoegd;
         totaalToegevoegd=0;
+        totaalAantalArtikelen = 0;
     }
 }

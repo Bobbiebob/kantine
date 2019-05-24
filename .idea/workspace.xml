@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51b0353b-05e4-4ba1-9e41-70c400cd1bc3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/java/KantineSimulatie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project compiler output/production/kantine/Kantine.class" beforeDir="false" afterPath="$PROJECT_DIR$/Project compiler output/production/kantine/Kantine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project compiler output/production/kantine/Kassa.class" beforeDir="false" afterPath="$PROJECT_DIR$/Project compiler output/production/kantine/Kassa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project compiler output/production/kantine/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Project compiler output/production/kantine/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/Kantine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Kantine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/Kassa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Kassa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project compiler output/production/kantine/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project compiler output/production/kantine/Week_1_opdrachten_AllardLeinenga_WesleyVanHoorn.rar" beforeDir="false" afterPath="$PROJECT_DIR$/Project compiler output/production/kantine/Week_1_opdrachten_AllardLeinenga_WesleyVanHoorn.rar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/KantineSimulatie_1.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,8 +39,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="136">
+              <caret line="8" column="42" selection-end-line="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/java/KantineSimulatie.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="850">
+              <caret line="50" column="31" lean-forward="true" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+              <folding>
+                <element signature="e#176#177#0" expanded="true" />
+                <element signature="e#215#216#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -49,7 +61,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/Kassa.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-719">
+            <state relative-caret-position="136">
               <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
               <folding>
                 <element signature="e#1118#1119#0" expanded="true" />
@@ -63,8 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/Kantine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-294">
-              <caret line="23" column="16" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+            <state relative-caret-position="391">
+              <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
               <folding>
                 <element signature="e#1370#1371#0" expanded="true" />
                 <element signature="e#1398#1399#0" expanded="true" />
@@ -110,11 +122,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/Datum.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="289">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -160,18 +172,19 @@
         <option value="$PROJECT_DIR$/src/java/Contant.java" />
         <option value="$PROJECT_DIR$/src/java/Pinpas.java" />
         <option value="$PROJECT_DIR$/src/java/KantineAanbod.java" />
-        <option value="$PROJECT_DIR$/src/java/Datum.java" />
         <option value="$PROJECT_DIR$/src/java/Artikel.java" />
         <option value="$PROJECT_DIR$/src/java/Kassa.java" />
         <option value="$PROJECT_DIR$/src/java/Kantine.java" />
+        <option value="$PROJECT_DIR$/src/java/Datum.java" />
         <option value="$PROJECT_DIR$/src/java/KantineSimulatie_1.java" />
         <option value="$PROJECT_DIR$/src/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/java/KantineSimulatie.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="921" />
-    <option name="width" value="942" />
+    <option name="x" value="719" />
+    <option name="width" value="1144" />
     <option name="height" value="1087" />
   </component>
   <component name="ProjectView">
@@ -213,7 +226,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558693267209" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558696740669" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -242,7 +255,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.KantineSimulatie">
+    <configuration name="KantineSimulatie" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="KantineSimulatie" />
+      <module name="kantine" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="kantine" />
@@ -270,9 +290,11 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Cucumber java.All Features in: kantine" />
+      <item itemvalue="Application.KantineSimulatie" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.KantineSimulatie" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Cucumber java.All Features in: kantine" />
       </list>
@@ -292,18 +314,18 @@
       <workItem from="1557914616937" duration="310000" />
       <workItem from="1558512974596" duration="4601000" />
       <workItem from="1558517665410" duration="865000" />
-      <workItem from="1558529789468" duration="6573000" />
+      <workItem from="1558529789468" duration="10241000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31758000" />
+    <option name="totallyTimeSpent" value="35426000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="921" y="0" width="942" height="1087" extended-state="0" />
+    <frame x="719" y="0" width="1144" height="1087" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25510204" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20756458" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -312,13 +334,13 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.17237799" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39937106" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32914045" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39937106" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32914045" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3312369" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -366,18 +388,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/java/Main.java</url>
-          <line>16</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Artikel1" />
@@ -504,9 +514,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/Datum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/java/Kassa.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-719">
+        <state relative-caret-position="136">
           <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
           <folding>
             <element signature="e#1118#1119#0" expanded="true" />
@@ -516,10 +533,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/java/Kantine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-294">
-          <caret line="23" column="16" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+        <state relative-caret-position="391">
+          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
           <folding>
             <element signature="e#1370#1371#0" expanded="true" />
             <element signature="e#1398#1399#0" expanded="true" />
@@ -531,24 +555,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/KantineSimulatie_1.java">
+    <entry file="file://$PROJECT_DIR$/src/java/KantineSimulatie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/Datum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="850">
+          <caret line="50" column="31" lean-forward="true" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+          <folding>
+            <element signature="e#176#177#0" expanded="true" />
+            <element signature="e#215#216#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

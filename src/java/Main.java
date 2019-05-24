@@ -14,6 +14,7 @@ public class Main {
         Datum datum3 = new Datum(31,2,2000);
         Datum datum4 = new Datum(28,2,2000);
         Datum datum5 = new Datum(29,2,2000);
+        Datum datum6 = new Datum(29,2,2001);
         Persoon persoon = new Persoon(15465465, "henk", "tank", datum1, 'm');
         Dienblad dienblad = new Dienblad(persoon);
 
@@ -22,7 +23,7 @@ public class Main {
         System.out.println("Nieuw persoon sluit aan...");
         kantine.verwerkRijVoorKassa();
         System.out.println("Rij laten afrekenen...");
-        System.out.println("Er zijn "+kantine.aantalArtikelen()+" artikelen afgerekend");
+        System.out.println("Er zijn "+kantine.getAantalArtikelen()+" artikelen afgerekend");
         System.out.println("artikel in kewstie: " + artikel.toString());
         System.out.println("persoon in kwestie: " + persoon.toString());
         System.out.println("aantal artikelen op het dienblad: " + dienblad.getAantalArtikelen());
@@ -36,5 +37,6 @@ public class Main {
         System.out.println(datum3.getDatumAsString());
         System.out.println(datum4.getDatumAsString());
         System.out.println(datum5.getDatumAsString());
+        System.out.println(datum6.getDatumAsString());
     }
 }

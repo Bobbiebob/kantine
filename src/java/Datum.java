@@ -27,10 +27,10 @@ public class Datum {
 			else if(maand == 1 || maand == 3 || maand == 5 || maand == 7 || maand == 8 || maand == 10 || maand == 12){
 				return true;
 			}
-			else if((!((jaar % 4) == 0)) && (dag <= 28 && maand == 2)){
+			else if((!((jaar % 4) == 0)) && (dag <= 28)){
 				return true;
 			}
-			else if(dag <= 29 && maand == 2){
+			else if(dag <= 29 && ((jaar % 4) == 0)){
 				return true;
 			}
 		}

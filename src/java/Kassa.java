@@ -62,4 +62,36 @@ public class Kassa {
         totaalToegevoegd=0;
         totaalAantalArtikelen = 0;
     }
+
+    public KassaRij getKassarij() {
+        return kassarij;
+    }
+
+    public void setKassarij(KassaRij kassarij) {
+        this.kassarij = kassarij;
+    }
+
+    public int getTotaalAantalArtikelen() {
+        return totaalAantalArtikelen;
+    }
+
+    public void setTotaalAantalArtikelen(int totaalAantalArtikelen) {
+        this.totaalAantalArtikelen = totaalAantalArtikelen;
+    }
+
+    public double getGeldInKassa() {
+        return geldInKassa;
+    }
+
+    public void setGeldInKassa(double geldInKassa) {
+        this.geldInKassa = geldInKassa;
+    }
+
+    public double getTotaalToegevoegd() {
+        return totaalToegevoegd;
+    }
+
+    public void setTotaalToegevoegd(double totaalToegevoegd) {
+        this.totaalToegevoegd = totaalToegevoegd;
+    }
 }

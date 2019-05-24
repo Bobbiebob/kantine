@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class KassaRij {
@@ -7,10 +6,10 @@ public class KassaRij {
      * Constructor
      */
 
-    private ArrayList<Dienblad> kassarij;
+    private LinkedList<Dienblad> kassarij;
 
     public KassaRij() {
-        kassarij = new ArrayList<Dienblad>();
+        this.kassarij = new LinkedList<Dienblad>();
     }
 
     /**
@@ -19,7 +18,7 @@ public class KassaRij {
      * @param klant
      */
     public void sluitAchteraan(Dienblad klant) {
-        kassarij.add(klant);
+        kassarij.addLast(klant);
     }
 
     /**
@@ -31,7 +30,7 @@ public class KassaRij {
      */
     public Dienblad eerstePersoonInRij() {
         if (kassarij.size()>0){
-            return kassarij.remove(0);
+            return kassarij.removeFirst();
         }
         return null;
     }

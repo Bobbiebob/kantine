@@ -1,8 +1,9 @@
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Stack;
 
 public class Dienblad {
-    private ArrayList<Artikel> artikelen;
+    private Stack<Artikel> artikelen;
     private Persoon klant;
 
     /**
@@ -10,11 +11,11 @@ public class Dienblad {
      */
     public Dienblad() {
 
-        artikelen = new ArrayList<>();
+        artikelen = new Stack<>();
     }
 
     public Dienblad(Persoon klant){
-        artikelen = new ArrayList<>();
+        artikelen = new Stack<>();
         this.klant = klant;
     }
 
@@ -52,14 +53,18 @@ public class Dienblad {
     }
 
     /**
-     *
-     * @return
+     * Methode om persoon van het dienblad op te vragen
+     * @return De persoon
      */
 
     public Persoon getKlant(){
         return klant;
     }
 
+    /**
+     * Methode om een klant toe te wijzen aan een klantloos dienblad
+     * @param klant
+     */
     public void setKlant(Persoon klant){
         this.klant = klant;
     }

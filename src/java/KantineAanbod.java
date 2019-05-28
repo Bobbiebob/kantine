@@ -1,6 +1,6 @@
 //import java.util.*;
 //
-//public class KantineAanbod {
+public class KantineAanbod {
 //    // interne opslag voorraad
 //    private HashMap<String, ArrayList<Artikel>> aanbod;
 //    private HashMap<String, Integer> startVoorraad;
@@ -79,4 +79,4 @@
 //    public Artikel getArtikel(String productnaam) {
 //        return getArtikel(getArrayList(productnaam));
 //    }
-//}
+}

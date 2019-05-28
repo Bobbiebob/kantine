@@ -1,7 +1,8 @@
+import java.util.Random;
+
 public class KantineSimulatie {
 
     private static Kantine kantine;
-
     private static final int DAGEN = 7;
 
     /**

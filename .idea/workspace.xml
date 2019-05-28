@@ -2,12 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51b0353b-05e4-4ba1-9e41-70c400cd1bc3" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/Project compiler output/production/kantine/KantineAanbod.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Project compiler output/production/kantine/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project compiler output/production/kantine/KantineSimulatie.class" beforeDir="false" afterPath="$PROJECT_DIR$/Project compiler output/production/kantine/KantineSimulatie.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/KantineAanbod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/KantineAanbod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/KantineSimulatie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/KantineSimulatie.java" afterDir="false" />
+=======
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml___jb_old___" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project compiler output/production/kantine/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Project compiler output/production/kantine/Main.class" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/src/java/KantineSimulatie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project compiler output/production/kantine/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project compiler output/production/kantine/Week_1_opdrachten_AllardLeinenga_WesleyVanHoorn.rar" beforeDir="false" afterPath="$PROJECT_DIR$/Project compiler output/production/kantine/Week_1_opdrachten_AllardLeinenga_WesleyVanHoorn.rar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/KantineSimulatie_1.java" beforeDir="false" />
+>>>>>>> df6ab4fcd1dfbcbaaa544619cc0d1f134e8ea242
+>>>>>>> 5a58cc2d53f26ac35eb22415dd9d546ab18a3516
       <change beforePath="$PROJECT_DIR$/src/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -35,9 +48,59 @@
     <option name="autoscrollToSource" value="true" />
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1410600832">
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="1467" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="1467" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/src/java/Dienblad.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-102">
+              <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#521#522#0" expanded="true" />
+                <element signature="e#559#560#0" expanded="true" />
+                <element signature="e#698#699#0" expanded="true" />
+                <element signature="e#737#738#0" expanded="true" />
+                <element signature="e#1186#1187#0" expanded="true" />
+                <element signature="e#1214#1215#0" expanded="true" />
+                <element signature="e#1372#1373#0" expanded="true" />
+                <element signature="e#1406#1407#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="21" column="57" lean-forward="true" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+=======
         <entry file="file://$PROJECT_DIR$/src/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="320">
@@ -90,11 +153,13 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+>>>>>>> df6ab4fcd1dfbcbaaa544619cc0d1f134e8ea242
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/java/KassaRij.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="40">
@@ -102,6 +167,104 @@
               <folding>
                 <element signature="e#184#185#0" expanded="true" />
                 <element signature="e#236#237#0" expanded="true" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/java/KantineSimulatie_1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="50" column="11" lean-forward="true" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/KantineAanbod.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="51" column="7" lean-forward="true" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
+              <folding>
+                <element signature="e#857#866#0" expanded="true" />
+                <element signature="e#1904#1905#0" expanded="true" />
+                <element signature="e#1951#1952#0" expanded="true" />
+                <element signature="e#2758#2759#0" expanded="true" />
+                <element signature="e#2818#2819#0" expanded="true" />
+>>>>>>> 5a58cc2d53f26ac35eb22415dd9d546ab18a3516
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/KassaRij.java">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="-7">
+              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+=======
+            <state relative-caret-position="384">
+              <caret line="34" column="20" lean-forward="true" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+              <folding>
+                <element signature="e#185#186#0" expanded="true" />
+                <element signature="e#238#239#0" expanded="true" />
+                <element signature="e#371#372#0" expanded="true" />
+                <element signature="e#406#407#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/java/Kantine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="553">
+              <caret line="60" column="39" lean-forward="true" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
+              <folding>
+                <element signature="e#1586#1587#0" expanded="true" />
+                <element signature="e#1638#1639#0" expanded="true" />
+                <element signature="e#1805#1806#0" expanded="true" />
+                <element signature="e#1851#1852#0" expanded="true" />
+                <element signature="e#2015#2016#0" expanded="true" />
+                <element signature="e#2049#2050#0" expanded="true" />
+                <element signature="e#2099#2100#0" expanded="true" />
+                <element signature="e#2135#2136#0" expanded="true" />
+                <element signature="e#2174#2175#0" expanded="true" />
+                <element signature="e#2203#2204#0" expanded="true" />
+              </folding>
+>>>>>>> 5a58cc2d53f26ac35eb22415dd9d546ab18a3516
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/Kassa.java">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="340">
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="316">
+              <caret line="31" column="38" lean-forward="true" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+=======
+            <state relative-caret-position="289">
+>>>>>>> 5a58cc2d53f26ac35eb22415dd9d546ab18a3516
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+>>>>>>> df6ab4fcd1dfbcbaaa544619cc0d1f134e8ea242
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/Persoon.java">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="-7">
+              <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+=======
+            <state relative-caret-position="153">
+              <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+>>>>>>> 5a58cc2d53f26ac35eb22415dd9d546ab18a3516
+              <folding>
+                <element signature="e#1429#1430#0" expanded="true" />
+                <element signature="e#1470#1471#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -110,30 +273,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/Artikel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/Datum.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/Persoon.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-              <folding>
-                <element signature="e#1429#1430#0" expanded="true" />
-                <element signature="e#1470#1471#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="323">
+              <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -158,28 +299,64 @@
         <option value="$PROJECT_DIR$/src/main/java/Artikelen.java" />
         <option value="$PROJECT_DIR$/src/java/Artikelen.java" />
         <option value="$PROJECT_DIR$/src/java/Persoon.java" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/src/java/Kassa.java" />
+=======
         <option value="$PROJECT_DIR$/src/java/Dienblad.java" />
+>>>>>>> df6ab4fcd1dfbcbaaa544619cc0d1f134e8ea242
         <option value="$PROJECT_DIR$/.idea/compiler.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/java/Administratie.java" />
         <option value="$PROJECT_DIR$/src/java/KantineSimulatie_2.java" />
         <option value="$PROJECT_DIR$/src/java/Contant.java" />
         <option value="$PROJECT_DIR$/src/java/Pinpas.java" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/src/java/Datum.java" />
+        <option value="$PROJECT_DIR$/src/java/Artikel.java" />
+        <option value="$PROJECT_DIR$/src/java/Dienblad.java" />
+        <option value="$PROJECT_DIR$/src/java/KantineSimulatie_1.java" />
+        <option value="$PROJECT_DIR$/src/java/KantineAanbod.java" />
+        <option value="$PROJECT_DIR$/src/java/Kantine.java" />
+        <option value="$PROJECT_DIR$/src/java/KassaRij.java" />
+=======
+        <option value="$PROJECT_DIR$/src/java/KantineAanbod.java" />
+>>>>>>> 5a58cc2d53f26ac35eb22415dd9d546ab18a3516
         <option value="$PROJECT_DIR$/src/java/Artikel.java" />
         <option value="$PROJECT_DIR$/src/java/Kassa.java" />
         <option value="$PROJECT_DIR$/src/java/Kantine.java" />
         <option value="$PROJECT_DIR$/src/java/Datum.java" />
         <option value="$PROJECT_DIR$/src/java/KantineSimulatie_1.java" />
+<<<<<<< HEAD
+=======
+>>>>>>> df6ab4fcd1dfbcbaaa544619cc0d1f134e8ea242
+        <option value="$PROJECT_DIR$/src/java/Main.java" />
+>>>>>>> 5a58cc2d53f26ac35eb22415dd9d546ab18a3516
         <option value="$PROJECT_DIR$/src/java/KantineSimulatie.java" />
         <option value="$PROJECT_DIR$/src/java/KantineAanbod.java" />
         <option value="$PROJECT_DIR$/src/java/Main.java" />
       </list>
     </option>
   </component>
+<<<<<<< HEAD
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1872" />
+    <option name="height" value="1096" />
+=======
   <component name="ProjectFrameBounds">
     <option name="x" value="727" />
     <option name="width" value="1136" />
     <option name="height" value="1087" />
+>>>>>>> df6ab4fcd1dfbcbaaa544619cc0d1f134e8ea242
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -191,22 +368,22 @@
         <subPane>
           <expand>
             <path>
-              <item name="kantine1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kantine1" type="462c0819:PsiDirectoryNode" />
+              <item name="kantine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kantine" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="kantine1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kantine1" type="462c0819:PsiDirectoryNode" />
+              <item name="kantine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kantine" type="462c0819:PsiDirectoryNode" />
               <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="kantine1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kantine1" type="462c0819:PsiDirectoryNode" />
+              <item name="kantine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kantine" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="kantine1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kantine1" type="462c0819:PsiDirectoryNode" />
+              <item name="kantine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kantine" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -214,13 +391,25 @@
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
+=======
+      <pane id="PackagesPane" />
+>>>>>>> 5a58cc2d53f26ac35eb22415dd9d546ab18a3516
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558702752297" />
+=======
+<<<<<<< HEAD
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558702673528" />
+=======
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558696740669" />
+>>>>>>> df6ab4fcd1dfbcbaaa544619cc0d1f134e8ea242
+>>>>>>> 5a58cc2d53f26ac35eb22415dd9d546ab18a3516
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -314,7 +503,19 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="41231000" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="37053000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+=======
+    <option name="totallyTimeSpent" value="35426000" />
+>>>>>>> 5a58cc2d53f26ac35eb22415dd9d546ab18a3516
   </component>
   <component name="ToolWindowManager">
     <frame x="727" y="0" width="1136" height="1087" extended-state="0" />
@@ -352,34 +553,38 @@
       <window_info anchor="right" id="Palette&#9;" order="9" />
     </layout>
     <layout-to-restore>
+>>>>>>> df6ab4fcd1dfbcbaaa544619cc0d1f134e8ea242
       <window_info id="Image Layers" order="0" />
       <window_info id="Designer" order="1" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.25746268" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" order="0" weight="0.329718" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.3286334" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info anchor="bottom" id="Message" order="3" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.17237799" />
+      <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.3997923" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.12581345" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Theme Preview" order="2" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
-    </layout-to-restore>
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="right" id="Database" order="7" weight="0.32993197" />
+      <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="9" />
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -459,6 +664,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/java/Kantine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="386">
@@ -482,6 +688,19 @@
             <element signature="e#201#202#0" expanded="true" />
             <element signature="e#240#241#0" expanded="true" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/src/java/Datum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/KantineSimulatie_1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="50" column="11" lean-forward="true" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
+>>>>>>> 5a58cc2d53f26ac35eb22415dd9d546ab18a3516
         </state>
       </provider>
     </entry>
@@ -501,8 +720,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/Persoon.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-7">
           <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+=======
+        <state relative-caret-position="153">
+          <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+>>>>>>> 5a58cc2d53f26ac35eb22415dd9d546ab18a3516
           <folding>
             <element signature="e#1429#1430#0" expanded="true" />
             <element signature="e#1470#1471#0" expanded="true" />
@@ -510,7 +734,30 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/java/KassaRij.java">
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/java/KassaRij.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="34" column="20" lean-forward="true" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+          <folding>
+            <element signature="e#185#186#0" expanded="true" />
+            <element signature="e#238#239#0" expanded="true" />
+            <element signature="e#371#372#0" expanded="true" />
+            <element signature="e#406#407#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/Kassa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="31" column="38" lean-forward="true" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/java/Dienblad.java">
+>>>>>>> 5a58cc2d53f26ac35eb22415dd9d546ab18a3516
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
@@ -525,20 +772,101 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="17" selection-start-line="17" selection-end-line="17" />
+>>>>>>> df6ab4fcd1dfbcbaaa544619cc0d1f134e8ea242
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/java/Kassa.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="-102">
+          <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#559#560#0" expanded="true" />
+            <element signature="e#698#699#0" expanded="true" />
+            <element signature="e#737#738#0" expanded="true" />
+            <element signature="e#1186#1187#0" expanded="true" />
+            <element signature="e#1214#1215#0" expanded="true" />
+            <element signature="e#1372#1373#0" expanded="true" />
+            <element signature="e#1406#1407#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/Artikel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/KantineAanbod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="51" column="7" lean-forward="true" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
+          <folding>
+            <element signature="e#857#866#0" expanded="true" />
+            <element signature="e#1904#1905#0" expanded="true" />
+            <element signature="e#1951#1952#0" expanded="true" />
+            <element signature="e#2758#2759#0" expanded="true" />
+            <element signature="e#2818#2819#0" expanded="true" />
+=======
+        <state relative-caret-position="136">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <folding>
+            <element signature="e#1118#1119#0" expanded="true" />
+            <element signature="e#1162#1163#0" expanded="true" />
+            <element signature="method#setTotaalAantalArtikelen#0;class#Kassa#0" />
+>>>>>>> df6ab4fcd1dfbcbaaa544619cc0d1f134e8ea242
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+<<<<<<< HEAD
+        <state relative-caret-position="264">
+          <caret line="21" column="57" lean-forward="true" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+=======
+        <state relative-caret-position="136">
+          <caret line="8" column="42" selection-end-line="42" />
+>>>>>>> df6ab4fcd1dfbcbaaa544619cc0d1f134e8ea242
+>>>>>>> 5a58cc2d53f26ac35eb22415dd9d546ab18a3516
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/Kassa.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="360">
           <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="553">
+          <caret line="60" column="39" lean-forward="true" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
+          <folding>
+            <element signature="e#1586#1587#0" expanded="true" />
+            <element signature="e#1638#1639#0" expanded="true" />
+            <element signature="e#1805#1806#0" expanded="true" />
+            <element signature="e#1851#1852#0" expanded="true" />
+            <element signature="e#2015#2016#0" expanded="true" />
+            <element signature="e#2049#2050#0" expanded="true" />
+            <element signature="e#2099#2100#0" expanded="true" />
+            <element signature="e#2135#2136#0" expanded="true" />
+            <element signature="e#2174#2175#0" expanded="true" />
+            <element signature="e#2203#2204#0" expanded="true" />
+=======
+        <state relative-caret-position="391">
+          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+>>>>>>> 5a58cc2d53f26ac35eb22415dd9d546ab18a3516
           <folding>
             <element signature="e#1118#1119#0" expanded="true" />
             <element signature="e#1162#1163#0" expanded="true" />
@@ -552,7 +880,13 @@
         <state relative-caret-position="240">
           <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
           <folding>
+<<<<<<< HEAD
             <element signature="imports" expanded="true" />
+=======
+            <element signature="e#176#177#0" expanded="true" />
+            <element signature="e#215#216#0" expanded="true" />
+>>>>>>> df6ab4fcd1dfbcbaaa544619cc0d1f134e8ea242
+>>>>>>> 5a58cc2d53f26ac35eb22415dd9d546ab18a3516
           </folding>
         </state>
       </provider>

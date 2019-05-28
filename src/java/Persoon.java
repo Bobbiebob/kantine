@@ -1,11 +1,11 @@
 public class Persoon {
-	private int bsn_nummer;
+	private long bsn_nummer;
 	private String voornaam;
 	private String achternaam;
 	private Datum geboorteDatum;
 	private char geslacht;
 
-	public Persoon(int bsn_nummer, String voornaam, String achternaam, Datum geboorteDatum, char geslacht) {
+	public Persoon(long bsn_nummer, String voornaam, String achternaam, Datum geboorteDatum, char geslacht) {
 		this.bsn_nummer = bsn_nummer;
 		this.voornaam = voornaam;
 		this.achternaam = achternaam;
@@ -13,10 +13,18 @@ public class Persoon {
 		setGeslacht(geslacht);
 	}
 
-	public Persoon(int bsn_nummer, String voornaam, String achternaam){
+	public Persoon(long bsn_nummer, String voornaam, String achternaam){
 		this.bsn_nummer = bsn_nummer;
 		this.voornaam = voornaam;
 		this.achternaam = achternaam;
+		this.geboorteDatum = new Datum();
+		this.geslacht = 'x';
+	}
+
+	public Persoon(){
+		this.bsn_nummer = 0;
+		this.voornaam = "";
+		this.achternaam = "";
 		this.geboorteDatum = new Datum();
 		this.geslacht = 'x';
 	}
@@ -26,7 +34,7 @@ public class Persoon {
 		return (bsn_nummer + ", " + voornaam + ", " + achternaam + ", " + getGeslacht() + ", " + getGeboorteDatum());
 	}
 
-	public int getBsn_nummer() {
+	public long getBsn_nummer() {
 		return bsn_nummer;
 	}
 

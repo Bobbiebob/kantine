@@ -4,9 +4,9 @@ public class Kantine {
     private KassaRij kassarij;
     private KantineAanbod aanbod;
 
-    private String[] artikelnamen = {"Koffie","Pils 0,33L","Thee","Frisdrank 0,5L","Water 0,5L","Broodje gezond","Bakje patat","Appeltaartpunt","Pizzapunt","Salade"};
-    private double[] prijzen = {1.00,1.50,0.80,1.20,1.10,3.00,2.50,2.00,1.40,5.00};
-    private int[] voorraad = {1000,1000,1000,200,200,100,100,100,600,50};
+    private String[] artikelnamen;
+    private double[] prijzen;
+    private int[] voorraad;
 
     /**
      * Constructor
@@ -14,6 +14,9 @@ public class Kantine {
     public Kantine() {
         kassarij = new KassaRij();
         kassa = new Kassa(kassarij);
+        prijzen = new double[] {1.00,1.50,0.80,1.20,1.10,3.00,2.50,2.00,1.40,5.00};
+        voorraad = new int[] {1000,1000,1000,200,200,100,100,100,600,50};
+        artikelnamen = new String[] {"Koffie","Pils 0,33L","Thee","Frisdrank 0,5L","Water 0,5L","Broodje gezond","Bakje patat","Appeltaartpunt","Pizzapunt","Salade"};
         aanbod = new KantineAanbod(artikelnamen,prijzen,voorraad);
     }
 

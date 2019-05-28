@@ -23,6 +23,7 @@ public class Kantine {
      * @param artikelnamen array met gewenste artikelen
      * @param persoon de persoon die de artikelen wil kopen
      */
+
     public void loopPakSluitAan(Persoon persoon,String[]artikelnamen) {
         Dienblad dienblad = new Dienblad(persoon);
         for(String artikel:artikelnamen){
@@ -48,8 +49,8 @@ public class Kantine {
      *
      * @return hoeveelheid geld in kassa
      */
-    public double hoeveelheidGeldInKassa() {
-       return kassa.hoeveelheidGeldInKassa();
+    public double getGeldInKassa(){
+        return kassa.getGeldInKassa();
     }
 
     /**
@@ -57,8 +58,8 @@ public class Kantine {
      *
      * @return het aantal gepasseerde artikelen
      */
-    public int aantalArtikelen() {
-        return kassa.aantalArtikelen();
+    public int getAantalArtikelen(){
+       return kassa.getTotaalAantalArtikelen();
     }
 
     /**
@@ -77,3 +78,4 @@ public class Kantine {
         return aanbod;
     }
 }
+

@@ -2,10 +2,6 @@ import java.util.Iterator;
 
 public class Kassa {
 
-    /**
-     * Constructor
-     */
-
     private KassaRij kassarij;
     private int totaalAantalArtikelen;
     private double geldInKassa=100.05;
@@ -25,8 +21,8 @@ public class Kassa {
      * @param klant die moet afrekenen
      */
     public void rekenAf(Dienblad klant) {
-        double totaalPrijs = klant.getTotaalPrijs();
-        int aantalArtikelen = klant.getAantalArtikelen();
+        double totaalPrijs = getTotaalPrijs(klant);
+        int aantalArtikelen = getAantalArtikelen(klant);
         totaalAantalArtikelen+=aantalArtikelen;
         geldInKassa+=totaalPrijs;
         totaalToegevoegd+=totaalPrijs;
@@ -61,5 +57,30 @@ public class Kassa {
         geldInKassa-=totaalToegevoegd;
         totaalToegevoegd=0;
         totaalAantalArtikelen = 0;
+    }
+
+
+    /**
+     * Methode om de totaalprijs van de artikelen
+     * op dienblad uit te rekenen
+     *
+     * @return
+     */
+    private double getTotaalPrijs(Dienblad klant) {
+        Iterator<Artikel> it = klant.getArtikelen().iterator();
+        int totaalprijs = 0;
+        while (it.hasNext()){
+            totaalprijs+=it.next().getPrice();
+        }
+        return totaalprijs;
+    }
+
+    /**
+     * Methode om aantal artikelen op dienblad te tellen
+     * @param klant
+     * @return int aantal artikelen
+     */
+    private int getAantalArtikelen(Dienblad klant){
+        return klant.getArtikelen().size();
     }
 }

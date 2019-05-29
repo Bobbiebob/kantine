@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.Iterator;
+
 import java.util.Stack;
 
 public class Dienblad {
@@ -10,10 +9,13 @@ public class Dienblad {
      * Constructor
      */
     public Dienblad() {
-
         artikelen = new Stack<>();
     }
 
+    /**
+     * Constructor
+     * @param klant
+     */
     public Dienblad(Persoon klant){
         artikelen = new Stack<>();
         this.klant = klant;
@@ -29,34 +31,16 @@ public class Dienblad {
     }
 
     /**
-     * Methode om aantal artikelen op dienblad te tellen
-     *
-     * @return Het aantal artikelen
+     * @return stack artikelen
      */
-    public int getAantalArtikelen() {
-        return artikelen.size();
-    }
-
-    /**
-     * Methode om de totaalprijs van de artikelen
-     * op dienblad uit te rekenen
-     *
-     * @return De totaalprijs
-     */
-    public double getTotaalPrijs() {
-        Iterator<Artikel> it = artikelen.iterator();
-        int totaalprijs = 0;
-        while (it.hasNext()){
-            totaalprijs+=it.next().getPrice();
-        }
-        return totaalprijs;
+    public Stack<Artikel> getArtikelen() {
+        return artikelen;
     }
 
     /**
      * Methode om persoon van het dienblad op te vragen
      * @return De persoon
      */
-
     public Persoon getKlant(){
         return klant;
     }

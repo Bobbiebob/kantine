@@ -41,9 +41,6 @@ public class KassaRij {
      * @return Of er wel of geen rij bestaat
      */
     public boolean erIsEenRij() {
-        if (kassarij.size()>0){
-            return true;
-        }
-        return false;
+        return !kassarij.isEmpty();
     }
 }

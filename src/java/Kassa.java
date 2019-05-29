@@ -22,12 +22,12 @@ public class Kassa {
      *
      * @param klant die moet afrekenen
      */
-    public void rekenAf(Dienblad klant) {
+    void rekenAf(Dienblad klant) {
         double totaalPrijs = getTotaalPrijs(klant);
         int aantalArtikelen = getAantalArtikelen(klant);
-        totaalAantalArtikelen+=aantalArtikelen;
-        geldInKassa+=totaalPrijs;
-        totaalToegevoegd+=totaalPrijs;
+        totaalAantalArtikelen += aantalArtikelen;
+        geldInKassa += totaalPrijs;
+        totaalToegevoegd += totaalPrijs;
     }
 
     /**
@@ -36,7 +36,7 @@ public class Kassa {
      *
      * @return aantal artikelen
      */
-    public int aantalArtikelen() {
+    int aantalArtikelen() {
         return totaalAantalArtikelen;
     }
 
@@ -47,7 +47,7 @@ public class Kassa {
      *
      * @return hoeveelheid geld in de kassa
      */
-    public double hoeveelheidGeldInKassa() {
+    double hoeveelheidGeldInKassa() {
         return geldInKassa;
     }
 
@@ -55,9 +55,9 @@ public class Kassa {
      * reset de waarden van het aantal gepasseerde artikelen en
      * de totale hoeveelheid geld in de kassa.
      */
-    public void resetKassa() {
-        geldInKassa-=totaalToegevoegd;
-        totaalToegevoegd=0;
+    void resetKassa() {
+        geldInKassa -= totaalToegevoegd;
+        totaalToegevoegd = 0;
         totaalAantalArtikelen = 0;
     }
 

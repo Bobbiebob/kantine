@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class KantineAanbod {
+class KantineAanbod {
     // interne opslag voorraad
     private HashMap<String, ArrayList<Artikel>> aanbod;
     private HashMap<String, Integer> startVoorraad;
@@ -12,7 +12,7 @@ public class KantineAanbod {
      * is een lijst met hoeveelheden. Let op: de dimensies van de drie arrays
      * moeten wel gelijk zijn!
      */
-    public KantineAanbod(String[] artikelnaam, double[] prijs, int[] hoeveelheid) {
+    KantineAanbod(String[] artikelnaam, double[] prijs, int[] hoeveelheid) {
         aanbod = new HashMap<String, ArrayList<Artikel>>();
         startVoorraad = new HashMap<String, Integer>();
         prijzen = new HashMap<String,Double>();
@@ -54,18 +54,18 @@ public class KantineAanbod {
      * Retourneert null als de stapel leeg is.
      */
     private Artikel getArtikel(ArrayList<Artikel> stapel) {
-        if (stapel==null) {
+        if (stapel == null) {
             return null;
         }
-        if (stapel.size()==0)
+        if (stapel.size() == 0)
         {
            return null;
         }
         else
         {
-            Artikel a=stapel.get(0);
+            Artikel a = stapel.get(0);
             stapel.remove(0);
-            if(stapel.size()<=10)vulVoorraadAan(a.getName());
+            if(stapel.size() <= 10) { vulVoorraadAan(a.getName());}
             return a;
         }
     }
@@ -76,7 +76,7 @@ public class KantineAanbod {
      * @param productnaam (van artikel)
      * @return artikel (of null)
      */
-    public Artikel getArtikel(String productnaam) {
+    Artikel getArtikel(String productnaam) {
         return getArtikel(getArrayList(productnaam));
     }
 }

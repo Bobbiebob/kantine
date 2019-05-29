@@ -16,7 +16,7 @@ public class Dienblad {
      * Constructor
      * @param klant
      */
-    public Dienblad(Persoon klant){
+    Dienblad(Persoon klant){
         artikelen = new Stack<>();
         this.klant = klant;
     }
@@ -26,14 +26,14 @@ public class Dienblad {
      *
      * @param artikel
      */
-    public void voegToe(Artikel artikel) {
+    void voegToe(Artikel artikel) {
         artikelen.add(artikel);
     }
 
     /**
      * @return stack artikelen
      */
-    public Stack<Artikel> getArtikelen() {
+    Stack<Artikel> getArtikelen() {
         return artikelen;
     }
 

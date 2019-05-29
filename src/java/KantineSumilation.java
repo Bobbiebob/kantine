@@ -38,7 +38,7 @@ public class KantineSumilation {
      * Constructor
      *
      */
-    public KantineSumilation() {
+    private KantineSumilation() {
         kantine = new Kantine();
         random = new Random();
         int[] hoeveelheden = getRandomArray(
@@ -106,7 +106,7 @@ public class KantineSumilation {
      *
      * @param dagen
      */
-    public void simuleer(int dagen) {
+    private void simuleer(int dagen) {
         // for lus voor dagen
         for(int i = 0; i < dagen; i++) {
 
@@ -149,7 +149,7 @@ public class KantineSumilation {
         }
     }
 
-    public String valutaRoundingPrint(double money){
+    private String valutaRoundingPrint(double money){
         DecimalFormat df = new DecimalFormat("#.00");
         return df.format(money);
     }

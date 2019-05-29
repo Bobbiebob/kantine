@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 
-public class KassaRij {
+class KassaRij {
 
     /**
      * Constructor
@@ -8,7 +8,7 @@ public class KassaRij {
 
     private LinkedList<Dienblad> kassarij;
 
-    public KassaRij() {
+    KassaRij() {
         this.kassarij = new LinkedList<Dienblad>();
     }
 
@@ -17,7 +17,7 @@ public class KassaRij {
      *
      * @param klant
      */
-    public void sluitAchteraan(Dienblad klant) {
+    void sluitAchteraan(Dienblad klant) {
         kassarij.addLast(klant);
     }
 
@@ -28,7 +28,7 @@ public class KassaRij {
      *
      * @return Eerste klant in de rij of null
      */
-    public Dienblad eerstePersoonInRij() {
+    Dienblad eerstePersoonInRij() {
         if (kassarij.size()>0){
             return kassarij.removeFirst();
         }
@@ -40,7 +40,7 @@ public class KassaRij {
      *
      * @return Of er wel of geen rij bestaat
      */
-    public boolean erIsEenRij() {
+    boolean erIsEenRij() {
         return !kassarij.isEmpty();
     }
 }

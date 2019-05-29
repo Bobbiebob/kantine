@@ -3,12 +3,12 @@ public class KantineSimulatie {
     private Kantine kantine;
     private Persoon persoon;
     private String[] artikelen;
-    public static final int DAGEN = 7;
+    private static final int DAGEN = 7;
 
     /**
      * Constructor
      */
-    public KantineSimulatie() {
+    private KantineSimulatie() {
         this.kantine = new Kantine();
         this.persoon = new Persoon();
         this.artikelen = new String[]{ "Koffie","Pils 0,33L","Thee","Frisdrank 0,5L"};
@@ -20,8 +20,7 @@ public class KantineSimulatie {
      *
      * @param dagen
      */
-
-    public void simuleer(int dagen) {
+    private void simuleer(int dagen) {
 
         // herhaal voor elke dag
         for(int i = 0; i < dagen; i++) {

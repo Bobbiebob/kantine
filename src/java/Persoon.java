@@ -5,7 +5,7 @@ public class Persoon {
 	private Datum geboorteDatum;
 	private char geslacht;
 
-	public Persoon(long bsn_nummer, String voornaam, String achternaam, Datum geboorteDatum, char geslacht) {
+	Persoon(long bsn_nummer, String voornaam, String achternaam, Datum geboorteDatum, char geslacht) {
 		this.bsn_nummer = bsn_nummer;
 		this.voornaam = voornaam;
 		this.achternaam = achternaam;
@@ -13,7 +13,7 @@ public class Persoon {
 		setGeslacht(geslacht);
 	}
 
-	public Persoon(long bsn_nummer, String voornaam, String achternaam){
+	Persoon(long bsn_nummer, String voornaam, String achternaam){
 		this.bsn_nummer = bsn_nummer;
 		this.voornaam = voornaam;
 		this.achternaam = achternaam;
@@ -21,7 +21,7 @@ public class Persoon {
 		this.geslacht = 'x';
 	}
 
-	public Persoon(){
+	Persoon(){
 		this.bsn_nummer = 0;
 		this.voornaam = "";
 		this.achternaam = "";
@@ -58,7 +58,7 @@ public class Persoon {
 		this.achternaam = achternaam;
 	}
 
-	public String getGeboorteDatum() {
+	String getGeboorteDatum() {
 		if(geboorteDatum.getDatumAsString().equals("0-0-0")){
 			return "onbekend";
 		}
@@ -69,7 +69,7 @@ public class Persoon {
 		this.geboorteDatum = geboorteDatum;
 	}
 
-	public String getGeslacht() {
+	String getGeslacht() {
 		if(geslacht == 'v'){
 			return "vrouw";
 		}
@@ -79,7 +79,7 @@ public class Persoon {
 		return "onbekend";
 	}
 
-	public void setGeslacht(char geslacht) {
+	void setGeslacht(char geslacht) {
 		if(geslacht == 'v' || geslacht == 'm'){
 			this.geslacht = geslacht;
 		}

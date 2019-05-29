@@ -2,7 +2,7 @@ public class Artikel{
 	private String name;
 	private double price;
 
-	public Artikel(String name, double price) {
+	Artikel(String name, double price) {
 		this.name = name;
 		this.price = price;
 
@@ -15,7 +15,7 @@ public class Artikel{
 		return (name + "," + price);
 	}
 
-	public String getName() {
+	String getName() {
 		return name;
 	}
 
@@ -23,7 +23,7 @@ public class Artikel{
 		this.name = name;
 	}
 
-	public double getPrice() {
+	double getPrice() {
 		return price;
 	}
 

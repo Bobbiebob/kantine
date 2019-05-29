@@ -11,7 +11,7 @@ public class Kantine {
     /**
      * Constructor
      */
-    public Kantine() {
+    Kantine() {
         kassarij = new KassaRij();
         kassa = new Kassa(kassarij);
         prijzen = new double[] {1.00,1.50,0.80,1.20,1.10,3.00,2.50,2.00,1.40,5.00};
@@ -26,7 +26,7 @@ public class Kantine {
      * @param artikelnamen array met gewenste artikelen
      * @param persoon de persoon die de artikelen wil kopen
      */
-    public void loopPakSluitAan(Persoon persoon,String[]artikelnamen) {
+    void loopPakSluitAan(Persoon persoon,String[]artikelnamen) {
         Dienblad dienblad = new Dienblad(persoon);
         for(String artikel:artikelnamen){
             dienblad.voegToe(aanbod.getArtikel(artikel));
@@ -38,7 +38,7 @@ public class Kantine {
     /**
      * Deze methode handelt de rij voor de kassa af.
      */
-    public void verwerkRijVoorKassa() {
+    void verwerkRijVoorKassa() {
         while(kassarij.erIsEenRij()) {
             Dienblad eersteInRij = kassarij.eerstePersoonInRij();
             kassa.rekenAf(eersteInRij);
@@ -50,11 +50,11 @@ public class Kantine {
      * Deze methode reset de bijgehouden telling van
      * het aantal artikelen en "leegt" de inhoud van de kassa.
      */
-    public void resetKassa() {
+    void resetKassa() {
         kassa.resetKassa();
     }
 
-    public void setAanbod(KantineAanbod aanbod){
+    void setAanbod(KantineAanbod aanbod){
         this.aanbod = aanbod;
     }
 
@@ -62,7 +62,7 @@ public class Kantine {
         return aanbod;
     }
 
-    public Kassa getKassa() {
+    Kassa getKassa() {
         return kassa;
     }
 

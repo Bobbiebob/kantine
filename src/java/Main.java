@@ -22,7 +22,7 @@ public class Main {
         System.out.println("Nieuw persoon sluit aan...");
         kantine.verwerkRijVoorKassa();
         System.out.println("Rij laten afrekenen...");
-        System.out.println("Er zijn "+kantine.getKassa().aantalArtikelen()+" artikelen afgerekend");
+        System.out.println("Er zijn " + kantine.getKassa().aantalArtikelen() + " artikelen afgerekend");
         System.out.println("persoon in kwestie: " + persoon.toString());
 
         /* hier worden de data geretouneerd, komt er de datum 0-0-0 uit dan houdt dit in dat er een foutieve data was ingevoerd.

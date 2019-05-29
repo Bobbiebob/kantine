@@ -1,10 +1,12 @@
+import java.text.DecimalFormat;
 import java.util.Iterator;
+import java.math.*;
 
 public class Kassa {
 
     private KassaRij kassarij;
     private int totaalAantalArtikelen;
-    private double geldInKassa=100.05;
+    private double geldInKassa=100;
     private double totaalToegevoegd=0;
 
     public Kassa(KassaRij kassarij) {

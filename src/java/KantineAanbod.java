@@ -13,13 +13,13 @@ public class KantineAanbod {
      * moeten wel gelijk zijn!
      */
     public KantineAanbod(String[] artikelnaam, double[] prijs, int[] hoeveelheid) {
-        aanbod=new HashMap<String, ArrayList<Artikel>>();
-        startVoorraad=new HashMap<String, Integer>();
-        prijzen=new HashMap<String,Double>();
-        for(int i=0;i<artikelnaam.length;i++)
+        aanbod = new HashMap<String, ArrayList<Artikel>>();
+        startVoorraad = new HashMap<String, Integer>();
+        prijzen = new HashMap<String,Double>();
+        for(int i = 0; i < artikelnaam.length; i++)
         {
-            ArrayList<Artikel> artikelen=new ArrayList<Artikel>();
-            for(int j=0;j<hoeveelheid[i];j++)
+            ArrayList<Artikel> artikelen = new ArrayList<Artikel>();
+            for(int j = 0; j < hoeveelheid[i]; j++)
             {
                 artikelen.add(new Artikel(artikelnaam[i], prijs[i]));
             }
@@ -34,7 +34,7 @@ public class KantineAanbod {
     	int startHoeveelheid = startVoorraad.get(productnaam);
     	int huidigeHoeveelheid = huidigeVoorraad.size();
     	double prijs = prijzen.get(productnaam);
-        for(int j=huidigeHoeveelheid;j<startHoeveelheid;j++)
+        for(int j = huidigeHoeveelheid; j < startHoeveelheid; j++)
         {
         	huidigeVoorraad.add(new Artikel(productnaam, prijs));
         }

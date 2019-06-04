@@ -34,5 +34,12 @@ public class Main {
         System.out.println(datum3.getDatumAsString());
         System.out.println(datum4.getDatumAsString());
         System.out.println(datum5.getDatumAsString());
+
+        Persoon.Student student = new Persoon.Student(123456,"Zwarte", "Piet",(new Datum(2,3,1998)),'m',321, "Genderwetenschap");
+        System.out.println("\n"+
+                student.getStudentnummer()+"\n"+
+                        student.getBsn_nummer()
+        );
+
     }
 }

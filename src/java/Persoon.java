@@ -85,7 +85,7 @@ public class Persoon {
         }
     }
 
-    public class Student extends Persoon {
+    public static class Student extends Persoon {
 
         private int studentnummer;
         private String studie;
@@ -114,7 +114,7 @@ public class Persoon {
         }
     }
 
-    public class Docent extends Persoon {
+    public static class Docent extends Persoon {
 
         private String afkoring;
         private String afdeling;
@@ -143,7 +143,7 @@ public class Persoon {
         }
     }
 
-    public class KantineMedewerker extends Persoon {
+    public static class KantineMedewerker extends Persoon {
 
         private boolean magBijKassa;
         private int medewerkersnummer;

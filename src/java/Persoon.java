@@ -97,6 +97,12 @@ public class Persoon {
             this.studie = studie;
         }
 
+        public Student(){
+            super();
+            this.studentnummer=(int)(Math.random()*600000);
+            this.studie= "NNB";
+        }
+
         public int getStudentnummer(){
             return studentnummer;
         }
@@ -116,14 +122,20 @@ public class Persoon {
 
     public static class Docent extends Persoon {
 
-        private String afkoring;
+        private String afkorting;
         private String afdeling;
 
         public Docent(long bsn_nummer, String voornaam, String achternaam, Datum geboorteDatum, char geslacht, String afkorting, String afdeling){
             super(bsn_nummer, voornaam, achternaam, geboorteDatum, geslacht);
 
             this.afdeling = afdeling;
-            this.afkoring = afkorting;
+            this.afkorting = afkorting;
+        }
+
+        public Docent(){
+            super();
+            this.afdeling = "NNB";
+            this.afkorting = "NNB";
         }
 
         public String getAfdeling(){
@@ -135,11 +147,11 @@ public class Persoon {
         }
 
         public String getAfkoring(){
-            return afkoring;
+            return afkorting;
         }
 
         public void setAfkorting(String afkorting){
-            this.afkoring = afkorting;
+            this.afkorting = afkorting;
         }
     }
 
@@ -153,6 +165,12 @@ public class Persoon {
 
             this.magBijKassa = magBijKassa;
             this.medewerkersnummer = medewerkersnummer;
+        }
+
+        public KantineMedewerker(){
+            super();
+            this.magBijKassa = false;
+            this.medewerkersnummer = (int)(Math.random()*600000);
         }
 
         public boolean getMagKassa(){

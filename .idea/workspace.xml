@@ -3,7 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="51b0353b-05e4-4ba1-9e41-70c400cd1bc3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/Datum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Datum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project compiler output/production/kantine/Artikel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Project compiler output/production/kantine/Artikel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project compiler output/production/kantine/Dienblad.class" beforeDir="false" afterPath="$PROJECT_DIR$/Project compiler output/production/kantine/Dienblad.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project compiler output/production/kantine/Kantine.class" beforeDir="false" afterPath="$PROJECT_DIR$/Project compiler output/production/kantine/Kantine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project compiler output/production/kantine/KantineAanbod.class" beforeDir="false" afterPath="$PROJECT_DIR$/Project compiler output/production/kantine/KantineAanbod.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project compiler output/production/kantine/KantineSimulatie.class" beforeDir="false" afterPath="$PROJECT_DIR$/Project compiler output/production/kantine/KantineSimulatie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project compiler output/production/kantine/KantineSumilation.class" beforeDir="false" afterPath="$PROJECT_DIR$/Project compiler output/production/kantine/KantineSumilation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project compiler output/production/kantine/Kassa.class" beforeDir="false" afterPath="$PROJECT_DIR$/Project compiler output/production/kantine/Kassa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project compiler output/production/kantine/KassaRij.class" beforeDir="false" afterPath="$PROJECT_DIR$/Project compiler output/production/kantine/KassaRij.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project compiler output/production/kantine/Persoon.class" beforeDir="false" afterPath="$PROJECT_DIR$/Project compiler output/production/kantine/Persoon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/Administratie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Administratie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/Kantine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Kantine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,27 +42,45 @@
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/KassaRij.java">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/java/Administratie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+            <state relative-caret-position="510">
+              <caret line="66" column="20" lean-forward="true" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
               <folding>
-                <element signature="e#157#158#0" expanded="true" />
-                <element signature="e#215#216#0" expanded="true" />
-                <element signature="e#927#928#0" expanded="true" />
-                <element signature="e#969#970#0" expanded="true" />
+                <element signature="method#Administratie#0;class#Administratie#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/java/Datum.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="32" column="29" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+            <state relative-caret-position="270">
+              <caret line="47" column="22" lean-forward="true" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/KantineSumilation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="151" column="4" lean-forward="true" selection-start-line="151" selection-start-column="4" selection-end-line="154" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/Kantine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-328">
+              <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -77,28 +106,28 @@
         <option value="$PROJECT_DIR$/src/java/Artikelen.java" />
         <option value="$PROJECT_DIR$/.idea/compiler.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/java/Administratie.java" />
         <option value="$PROJECT_DIR$/src/java/Contant.java" />
         <option value="$PROJECT_DIR$/src/java/Pinpas.java" />
-        <option value="$PROJECT_DIR$/src/java/Artikel.java" />
-        <option value="$PROJECT_DIR$/src/java/Persoon.java" />
         <option value="$PROJECT_DIR$/src/java/KantineSimulatie_1.java" />
-        <option value="$PROJECT_DIR$/src/java/Kantine.java" />
-        <option value="$PROJECT_DIR$/src/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/java/Dienblad.java" />
         <option value="$PROJECT_DIR$/src/java/KantineSimulatie_2.java" />
-        <option value="$PROJECT_DIR$/src/java/KantineAanbod.java" />
-        <option value="$PROJECT_DIR$/src/java/KantineSimulatie.java" />
-        <option value="$PROJECT_DIR$/src/java/KantineSumilation.java" />
-        <option value="$PROJECT_DIR$/src/java/Kassa.java" />
-        <option value="$PROJECT_DIR$/src/java/KassaRij.java" />
         <option value="$PROJECT_DIR$/src/java/Datum.java" />
+        <option value="$PROJECT_DIR$/src/java/Artikel.java" />
+        <option value="$PROJECT_DIR$/src/java/Dienblad.java" />
+        <option value="$PROJECT_DIR$/src/java/KantineSimulatie.java" />
+        <option value="$PROJECT_DIR$/src/java/KassaRij.java" />
+        <option value="$PROJECT_DIR$/src/java/Persoon.java" />
+        <option value="$PROJECT_DIR$/src/java/Kassa.java" />
+        <option value="$PROJECT_DIR$/src/java/KantineAanbod.java" />
+        <option value="$PROJECT_DIR$/src/java/Kantine.java" />
+        <option value="$PROJECT_DIR$/src/java/KantineSumilation.java" />
+        <option value="$PROJECT_DIR$/src/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/java/Administratie.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="631" />
-    <option name="width" value="1232" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="756" />
+    <option name="width" value="1107" />
     <option name="height" value="1087" />
   </component>
   <component name="ProjectView">
@@ -106,7 +135,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -135,19 +163,20 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559137547974" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559819847952" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -241,15 +270,16 @@
       <workItem from="1558529789468" duration="3655000" />
       <workItem from="1559036379827" duration="5184000" />
       <workItem from="1559117755444" duration="11551000" />
-      <workItem from="1559137805832" duration="326000" />
+      <workItem from="1559137805832" duration="1435000" />
+      <workItem from="1559482416309" duration="12865000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54165000" />
+    <option name="totallyTimeSpent" value="68139000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1872" height="1096" extended-state="6" />
+    <frame x="756" y="0" width="1107" height="1087" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
@@ -257,17 +287,17 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.4984375" visible="true" weight="0.18818985" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.4984375" visible="true" weight="0.19484241" />
       <window_info id="Structure" order="6" sideWeight="0.5015625" side_tool="true" weight="0.18600683" />
       <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.33021808" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.33333334" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.17237799" />
       <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="8" weight="0.32914045" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.2264151" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.3951782" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" order="11" />
@@ -329,13 +359,6 @@
     <entry file="file://$PROJECT_DIR$/reverse.orig" />
     <entry file="file://$PROJECT_DIR$/reverse" />
     <entry file="file://$PROJECT_DIR$/reverse.rej" />
-    <entry file="file://$PROJECT_DIR$/src/java/KortingskaartHouder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -348,27 +371,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="80" selection-start-line="4" selection-start-column="80" selection-end-line="4" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/Administratie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/Contant.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -384,109 +386,121 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/Dienblad.java">
+    <entry file="file://$PROJECT_DIR$/src/java/Datum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding>
-            <element signature="e#188#189#0" expanded="true" />
-            <element signature="e#229#230#0" expanded="true" />
-            <element signature="e#858#859#0" expanded="true" />
-            <element signature="e#890#891#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="640">
+          <caret line="32" column="29" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/Artikel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="220">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/Persoon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1040">
+          <caret line="64" column="53" lean-forward="true" selection-start-line="64" selection-start-column="53" selection-end-line="64" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/KortingskaartHouder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/KassaRij.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/Dienblad.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/KantineSimulatie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1040">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        <state relative-caret-position="-230">
+          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/KantineAanbod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="300">
+          <caret line="67" column="34" selection-start-line="67" selection-start-column="34" selection-end-line="67" selection-end-column="34" />
           <folding>
-            <element signature="e#857#866#0" expanded="true" />
+            <element signature="e#2782#2783#0" expanded="true" />
+            <element signature="e#2842#2843#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/Kassa.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-290">
-          <caret line="50" column="26" lean-forward="true" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+        <state relative-caret-position="580">
+          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1437#1438#0" expanded="true" />
-            <element signature="e#1471#1472#0" expanded="true" />
-            <element signature="e#2269#2270#0" expanded="true" />
-            <element signature="e#2318#2319#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/KantineSumilation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="142" column="134" lean-forward="true" selection-start-line="142" selection-start-column="134" selection-end-line="142" selection-end-column="134" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2256#2257#0" expanded="true" />
-            <element signature="e#2314#2315#0" expanded="true" />
-            <element signature="e#4681#4682#0" expanded="true" />
-            <element signature="e#4719#4720#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/Kantine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="-328">
+          <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/Persoon.java">
+    <entry file="file://$PROJECT_DIR$/src/java/KantineSumilation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+        <state relative-caret-position="416">
+          <caret line="151" column="4" lean-forward="true" selection-start-line="151" selection-start-column="4" selection-end-line="154" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="80" selection-start-line="4" selection-start-column="80" selection-end-line="4" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+        <state relative-caret-position="270">
+          <caret line="47" column="22" lean-forward="true" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/KassaRij.java">
+    <entry file="file://$PROJECT_DIR$/src/java/Administratie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+        <state relative-caret-position="510">
+          <caret line="66" column="20" lean-forward="true" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
           <folding>
-            <element signature="e#157#158#0" expanded="true" />
-            <element signature="e#215#216#0" expanded="true" />
-            <element signature="e#927#928#0" expanded="true" />
-            <element signature="e#969#970#0" expanded="true" />
+            <element signature="method#Administratie#0;class#Administratie#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/Datum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="32" column="29" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
         </state>
       </provider>
     </entry>

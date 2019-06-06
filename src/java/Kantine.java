@@ -30,6 +30,7 @@ public class Kantine {
         Dienblad dienblad = new Dienblad(persoon);
         for(String artikel:artikelnamen){
             dienblad.voegToe(aanbod.getArtikel(artikel));
+
         }
         kassarij.sluitAchteraan(dienblad);
 

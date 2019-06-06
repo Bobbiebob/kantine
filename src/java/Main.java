@@ -1,7 +1,9 @@
+import java.text.DecimalFormat;
 public class Main {
 
     /**
-     * deze klasse word momenteel gebruikt om de andere klassen te testen, hiervoor is er fake data aan gemaakt om de uit komsten van de andere klassen te kunnen controleren.
+     * deze klasse word momenteel gebruikt om de andere klassen te testen, hiervoor is er fake data aan gemaakt om
+     * de uit komsten van de andere klassen te kunnen controleren.
      * @param args
      */
     public static void main(String[] args) {
@@ -25,7 +27,8 @@ public class Main {
         System.out.println("Er zijn " + kantine.getKassa().aantalArtikelen() + " artikelen afgerekend");
         System.out.println("persoon in kwestie: " + persoon.toString());
 
-        /* hier worden de data geretouneerd, komt er de datum 0-0-0 uit dan houdt dit in dat er een foutieve data was ingevoerd.
+        /* hier worden de data geretouneerd, komt er de datum 0-0-0 uit dan houdt dit in dat er een foutieve data
+           was ingevoerd.
            Voor verduidelijking van dit proces zie de klasse Datum
          */
         System.out.println(datum.getDatumAsString());
@@ -34,5 +37,27 @@ public class Main {
         System.out.println(datum3.getDatumAsString());
         System.out.println(datum4.getDatumAsString());
         System.out.println(datum5.getDatumAsString());
+
+        double[] tempDouble = {80.5, 80.9, 44.55, 94.48, 48.16, 49.77, 10.99, 81.5, 80.9, 44.55, 94.48, 48.16, 49.77,
+                10.99, 82.5, 80.9, 44.55, 94.48, 48.16, 49.77, 10.99};
+        int[] tempInt = {45, 56, 34, 39, 40, 31};
+        int[] tempInt2 = {45, 56};
+        int counter = 0;
+        for (double totaal: Administratie.dagTotalenGemiddelde(tempDouble)) {
+            System.out.println("dag " + counter + " totaal gemiddelde " + valutaRoundingPrint(totaal));
+            counter++;
+        }
+        counter = 0;
+        for (double totaal: Administratie.berekenDagOmzet(tempDouble)) {
+            System.out.println("dag " + counter + " totaal " + valutaRoundingPrint(totaal));
+            counter++;
+        }
+        System.out.println(Administratie.berekenGemiddeldAantal(tempInt2));
+        System.out.println("rounded decimal " + valutaRoundingPrint(Administratie.berekenGemiddeldeOmzet(tempDouble)));
+    }
+
+    private static String valutaRoundingPrint(double money){
+        DecimalFormat df = new DecimalFormat("#.00");
+        return df.format(money);
     }
 }

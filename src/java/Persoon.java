@@ -34,7 +34,7 @@ public class Persoon {
         return (bsn_nummer + ", " + voornaam + ", " + achternaam + ", " + getGeslacht() + ", " + getGeboorteDatum());
     }
 
-    public long getBsn_nummer() {
+    long getBsn_nummer() {
         return bsn_nummer;
     }
 

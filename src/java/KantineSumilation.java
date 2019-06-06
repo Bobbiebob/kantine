@@ -111,14 +111,19 @@ public class KantineSumilation {
         for(int i = 0; i < dagen; i++) {
 
             // bedenk hoeveel personen vandaag binnen lopen
-            int aantalpersonen = getRandomValue(0, getRandomValue(1,1000)) ;
+            int[] aantalpersonenArray = {89,10,1} ;
+            int aantalpersonen = 0;
+
+            for (int aantal: aantalpersonenArray) {
+                aantalpersonen += aantalpersonenArray[aantal];
+            }
 
             // laat de personen maar komen...
-            for(int j = 0; j < aantalpersonen; j++) {
+            for(int j = 0; j < aantalpersonenArray[0]; j++) {
 
                 // maak persoon en dienblad aan, koppel ze
                 // en bedenk hoeveel artikelen worden gepakt
-	            Persoon persoon = new Persoon();
+	            Persoon.Student student = new Persoon.Student();
 	            Dienblad dienblad = new Dienblad(persoon);
                 int aantalartikelen = getRandomValue(1,30) ;
 

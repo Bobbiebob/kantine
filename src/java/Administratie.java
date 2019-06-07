@@ -57,11 +57,14 @@ public class Administratie {
 
     static double[] berekenDagOmzet(double[] omzet) {
         double[] temp = new double[DAYSINWEEK];
-        for(int i = 0; i < 7; i++) {
-            int j = 0;
-            while(j < omzet.length/7) {
-                temp[i] += omzet[i + 7 * j];
-				j++;
+
+        for(int i = 0; i < DAYSINWEEK; i++) {
+	        int j = 0;
+        	int counter = i + DAYSINWEEK * j;
+            while(counter < omzet.length) {
+		        temp[i] += omzet[i + 7 * j];
+		        j++;
+	            counter = i + DAYSINWEEK * j;
             }
         }
         return temp;

@@ -11,9 +11,13 @@ public class KantineSumilation {
 
     // random generator
     private Random random;
+    private Persoon persoon;
 
     // aantal artikelen
     private static final int AANTAL_ARTIKELEN = 4;
+    private static final int STUDENT = 89;
+    private static final int DOCENT = 10;
+    private static final int KANTINEMEDEWERKER = 1;
 
     // artikelen
     private static final String[] artikelnamen = new String[]
@@ -34,6 +38,8 @@ public class KantineSumilation {
     private static final int MIN_ARTIKELEN_PER_PERSOON = 1;
     private static final int MAX_ARTIKELEN_PER_PERSOON = 4;
 
+
+
     /**
      * Constructor
      *
@@ -49,7 +55,7 @@ public class KantineSumilation {
             artikelnamen, artikelprijzen, hoeveelheden);
 
         kantine.setAanbod(kantineaanbod);
-        simuleer(getRandomValue(1,7));
+        simuleer(getRandomValue(1,14));
     }
 
     /**
@@ -108,22 +114,32 @@ public class KantineSumilation {
      */
     private void simuleer(int dagen) {
         // for lus voor dagen
+        double[] omzet = new double[dagen];
+        int[] aantal = new int[dagen];
+
         for(int i = 0; i < dagen; i++) {
 
             // bedenk hoeveel personen vandaag binnen lopen
-            int[] aantalpersonenArray = {89,10,1} ;
-            int aantalpersonen = 0;
+            int aantalpersonen = STUDENT + DOCENT + KANTINEMEDEWERKER;
 
-            for (int aantal: aantalpersonenArray) {
-                aantalpersonen += aantalpersonenArray[aantal];
+            for(int j = 0; j < STUDENT; j++) {
+                this.persoon = new Persoon.Student();
+            }
+
+            for(int j = 0; j < DOCENT; j++) {
+                this.persoon = new Persoon.Docent();
+            }
+
+            for(int j = 0; j < KANTINEMEDEWERKER; j++) {
+                this.persoon = new Persoon.KantineMedewerker();
             }
 
             // laat de personen maar komen...
-            for(int j = 0; j < aantalpersonenArray[0]; j++) {
+            for(int j = 0; j < aantalpersonen; j++) {
 
                 // maak persoon en dienblad aan, koppel ze
                 // en bedenk hoeveel artikelen worden gepakt
-	            Persoon.Student student = new Persoon.Student();
+
 	            Dienblad dienblad = new Dienblad(persoon);
                 int aantalartikelen = getRandomValue(1,30) ;
 
@@ -140,23 +156,41 @@ public class KantineSumilation {
                 // artikelen, sluit aan
 	            kantine.loopPakSluitAan(persoon, artikelen);
 
+
             }
 
             // verwerk rij voor de kassa
 			kantine.verwerkRijVoorKassa();
+
             // druk de dagtotalen af en hoeveel personen binnen
 	        System.out.println("dag: " + i + " bedrag in kassa: " + valutaRoundingPrint(kantine.getKassa().hoeveelheidGeldInKassa()));
 	        System.out.println("artikelen verkocht: " + kantine.getKassa().aantalArtikelen());
-            // zijn gekomen
+
+	        // zijn gekomen
 			System.out.println("aantal klanten geweest: " + aantalpersonen);
+
+            //omzet optellen
+            omzet[i] = kantine.getKassa().hoeveelheidGeldInKassa();
+            aantal[i] = kantine.getKassa().aantalArtikelen();
+
             // reset de kassa voor de volgende dag
-			kantine.resetKassa();
+            kantine.resetKassa();
+
+            //enter invoegen voor de volgende dag
+            System.out.println("");
+        }
+        // dag/week waarden afdrukken
+        System.out.println("gemiddelde omzet " + valutaRoundingPrint(Administratie.berekenGemiddeldeOmzet(omzet)));
+        System.out.println("gemiddelde aantal " + Administratie.berekenGemiddeldAantal(aantal));
+        double[] dagomzetarray = Administratie.berekenDagOmzet(omzet);
+        for (double dagOmzet : dagomzetarray) {
+            System.out.println("dag omzet " + valutaRoundingPrint(dagOmzet));
         }
     }
 
-    private String valutaRoundingPrint(double money){
+    private double valutaRoundingPrint(double money){
         DecimalFormat df = new DecimalFormat("#.00");
-        return df.format(money);
+        return Double.parseDouble(df.format(money));
     }
 
     public static void main(String[] args) {

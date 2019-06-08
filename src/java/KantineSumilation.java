@@ -15,9 +15,9 @@ public class KantineSumilation {
 
     // aantal artikelen
     private static final int AANTAL_ARTIKELEN = 4;
-    private static final int STUDENT = 89;
-    private static final int DOCENT = 10;
-    private static final int KANTINEMEDEWERKER = 1;
+    private static int student = 89;
+    private static int docent = 10;
+    private static int kantinemedewerker = 1;
 
     // artikelen
     private static final String[] artikelnamen = new String[]
@@ -117,22 +117,27 @@ public class KantineSumilation {
         double[] omzet = new double[dagen];
         int[] aantal = new int[dagen];
 
+        //opgave 5
+        personGenerator(100);
+
         for(int i = 0; i < dagen; i++) {
 
             // bedenk hoeveel personen vandaag binnen lopen
-            int aantalpersonen = STUDENT + DOCENT + KANTINEMEDEWERKER;
+            // opgave 4a
+            int aantalpersonen = student + docent + kantinemedewerker;
 
-            for(int j = 0; j < STUDENT; j++) {
+            for(int j = 0; j < student; j++) {
                 this.persoon = new Persoon.Student();
             }
 
-            for(int j = 0; j < DOCENT; j++) {
+            for(int j = 0; j < docent; j++) {
                 this.persoon = new Persoon.Docent();
             }
 
-            for(int j = 0; j < KANTINEMEDEWERKER; j++) {
+            for(int j = 0; j < kantinemedewerker; j++) {
                 this.persoon = new Persoon.KantineMedewerker();
             }
+
 
             // laat de personen maar komen...
             for(int j = 0; j < aantalpersonen; j++) {
@@ -183,9 +188,45 @@ public class KantineSumilation {
         System.out.println("gemiddelde omzet " + valutaRoundingPrint(Administratie.berekenGemiddeldeOmzet(omzet)));
         System.out.println("gemiddelde aantal " + Administratie.berekenGemiddeldAantal(aantal));
         double[] dagomzetarray = Administratie.berekenDagOmzet(omzet);
+
+        int counter = 1;
         for (double dagOmzet : dagomzetarray) {
+            switch(counter){
+                case 1: System.out.print("Maandag ");
+                        break;
+                case 2: System.out.print("Dinsdag ");
+                        break;
+                case 3: System.out.print("Woensdag ");
+                        break;
+                case 4: System.out.print("Donderdag ");
+                        break;
+                case 5: System.out.print("Vrijdag ");
+                        break;
+                case 6: System.out.print("Zaterdag ");
+                        break;
+                case 7: System.out.print("Zondag ");
+                        break;
+            }
             System.out.println("dag omzet " + valutaRoundingPrint(dagOmzet));
+            counter++;
         }
+    }
+
+    private void personGenerator(int maxAmountToGenereate){
+        int aantal = random.nextInt(maxAmountToGenereate);
+        double leerling = aantal * 0.89;
+        double leraar = aantal * 0.1;
+        double dienbladVuller = aantal * 0.01;
+        student = (int) leerling;
+        docent = (int) leraar;
+        kantinemedewerker = (int) dienbladVuller;
+        if(student+docent+kantinemedewerker < aantal){
+            kantinemedewerker += 1;
+            if(student+docent+kantinemedewerker < aantal){
+                student += 1;
+            }
+        }
+
     }
 
     private double valutaRoundingPrint(double money){

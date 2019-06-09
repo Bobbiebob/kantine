@@ -31,7 +31,7 @@ public class Persoon {
 
     @Override
     public String toString() {
-        return (bsn_nummer + ", " + voornaam + ", " + achternaam + ", " + getGeslacht() + ", " + getGeboorteDatum());
+        return (bsn_nummer + ", " + voornaam + ", " + achternaam + ", " + getGeslacht() + ", " + getGeboorteDatum())+ ", " +getClass().getSimpleName();
     }
 
     long getBsn_nummer() {

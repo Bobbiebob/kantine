@@ -43,6 +43,7 @@ public class Main {
                 student.getStudentnummer()+"\n"+
                         student.getBsn_nummer()
         );
+        System.out.println("\n"+student.toString()+"\n");
 
         double[] tempDouble = {80.5, 80.9, 44.55, 94.48, 48.16, 49.77, 10.99, 81.5, 80.9, 44.55, 94.48, 48.16, 49.77,
                 10.99, 82.5, 80.9, 44.55, 94.48, 48.16, 49.77, 10.99};

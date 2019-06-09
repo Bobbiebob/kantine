@@ -5,7 +5,7 @@ import java.math.*;
 public class Kassa {
 
     private KassaRij kassarij;
-    private int totaalAantalArtikelen;
+    private int totaalAantalArtikelen=0;
     private double geldInKassa=100;
     private double totaalToegevoegd=0;
 
@@ -70,9 +70,10 @@ public class Kassa {
      */
     private double getTotaalPrijs(Dienblad klant) {
         Iterator<Artikel> it = klant.getArtikelen().iterator();
-        int totaalprijs = 0;
+        double totaalprijs = 0;
         while (it.hasNext()){
-            totaalprijs+=it.next().getPrice();
+            Artikel artikel = it.next();
+            totaalprijs+=artikel.getPrice();
         }
         return totaalprijs;
     }

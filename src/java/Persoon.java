@@ -30,10 +30,15 @@ public class Persoon {
         this.geslacht = 'x';
     }
 
+
     @Override
     public String toString() {
         return (bsn_nummer + ", " + voornaam + ", " + achternaam + ", " + getGeslacht() + ", " + getGeboorteDatum())+ ", " +getClass().getSimpleName();
     }
+
+    public double geefKortingsPercentage(){ return 0; }
+    public boolean heeftMaximum(){return false;}
+    public double geefMaximum(){return 0;}
 
     long getBsn_nummer() {
         return bsn_nummer;
@@ -129,7 +134,7 @@ public class Persoon {
         }
     }
 
-    public static class Docent extends Persoon {
+    public static class Docent extends Persoon implements KortingskaartHouder{
 
         private String afkorting;
         private String afdeling;
@@ -162,9 +167,25 @@ public class Persoon {
         public void setAfkorting(String afkorting){
             this.afkorting = afkorting;
         }
+
+        @Override
+        public double geefKortingsPercentage() {
+            return 0.25;
+        }
+
+        @Override
+        public boolean heeftMaximum() {
+            return true;
+        }
+
+        @Override
+        public double geefMaximum() {
+            return 1.0;
+        }
+
     }
 
-    public static class KantineMedewerker extends Persoon {
+    public static class KantineMedewerker extends Persoon implements KortingskaartHouder {
 
         private boolean magBijKassa;
         private int medewerkersnummer;
@@ -196,6 +217,21 @@ public class Persoon {
 
         public void setMedewerkersnummer(int medewerkersnummer){
             this.medewerkersnummer = medewerkersnummer;
+        }
+
+        @Override
+        public double geefMaximum() {
+            return 0;
+        }
+
+        @Override
+        public double geefKortingsPercentage() {
+            return 0.35;
+        }
+
+        @Override
+        public boolean heeftMaximum() {
+            return false;
         }
     }
 }

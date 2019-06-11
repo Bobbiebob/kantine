@@ -184,9 +184,9 @@ public class KantineSumilation {
             //enter invoegen voor de volgende dag
             System.out.println("");
         }
-        // dag/week waarden afdrukken
+        //opgave 4c dag/week waarden afdrukken
         System.out.println("gemiddelde omzet " + valutaRoundingPrint(Administratie.berekenGemiddeldeOmzet(omzet)));
-        System.out.println("gemiddelde aantal " + Administratie.berekenGemiddeldAantal(aantal));
+        System.out.println("gemiddelde aantal " + valutaRoundingPrint(Administratie.berekenGemiddeldAantal(aantal)));
         double[] dagomzetarray = Administratie.berekenDagOmzet(omzet);
 
         int counter = 1;
@@ -212,6 +212,12 @@ public class KantineSumilation {
         }
     }
 
+    /**
+     * opgave 5, deze methode genereerd met een max aan gegeven aantal, drie verschillende personen.
+     * Dit gebeurt aan de hand van een kans die er in zit hoeveel een bepaald persoon voor mag komen
+     * per 100 personen
+     * @param maxAmountToGenereate
+     */
     private void personGenerator(int maxAmountToGenereate){
         int aantal = random.nextInt(maxAmountToGenereate);
         double leerling = aantal * 0.89;

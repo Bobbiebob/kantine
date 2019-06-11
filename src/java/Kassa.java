@@ -23,11 +23,26 @@ public class Kassa {
      * @param klant die moet afrekenen
      */
     void rekenAf(Dienblad klant) {
+        //gegevens halen
         double totaalPrijs = getTotaalPrijs(klant);
         int aantalArtikelen = getAantalArtikelen(klant);
-        totaalAantalArtikelen += aantalArtikelen;
-        geldInKassa += totaalPrijs;
-        totaalToegevoegd += totaalPrijs;
+        Betaalwijze betaalwijze = klant.getKlant().getBetaalwijze();
+        boolean gelukt = true;
+
+        //geld afnemen van klant
+        try{betaalwijze.betaal(totaalPrijs);}
+        catch(Exception e){
+            System.out.println("Betaling niet gelukt");
+            gelukt = false;
+        }
+
+        //geld toevoegen aan kassa
+        if (gelukt){
+            totaalAantalArtikelen += aantalArtikelen;
+            geldInKassa += totaalPrijs;
+            totaalToegevoegd += totaalPrijs;
+        }
+
     }
 
     /**

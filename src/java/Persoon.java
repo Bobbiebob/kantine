@@ -4,6 +4,7 @@ public class Persoon {
     private String achternaam;
     private Datum geboorteDatum;
     private char geslacht;
+    private Betaalwijze betaalwijze;
 
     Persoon(long bsn_nummer, String voornaam, String achternaam, Datum geboorteDatum, char geslacht) {
         this.bsn_nummer = bsn_nummer;
@@ -58,7 +59,7 @@ public class Persoon {
         this.achternaam = achternaam;
     }
 
-    String getGeboorteDatum() {
+    public String getGeboorteDatum() {
         if (geboorteDatum.getDatumAsString().equals("0-0-0")) {
             return "onbekend";
         } else return geboorteDatum.getDatumAsString();
@@ -68,7 +69,7 @@ public class Persoon {
         this.geboorteDatum = geboorteDatum;
     }
 
-    String getGeslacht() {
+    public String getGeslacht() {
         if (geslacht == 'v') {
             return "vrouw";
         } else if (geslacht == 'm') {
@@ -77,12 +78,20 @@ public class Persoon {
         return "onbekend";
     }
 
-    void setGeslacht(char geslacht) {
+    public void setGeslacht(char geslacht) {
         if (geslacht == 'v' || geslacht == 'm') {
             this.geslacht = geslacht;
         } else {
             this.geslacht = 'x';
         }
+    }
+
+    public Betaalwijze getBetaalwijze(){
+        return betaalwijze;
+    }
+
+    public void setBetaalwijze(Betaalwijze betaalwijze){
+        this.betaalwijze = betaalwijze;
     }
 
     public static class Student extends Persoon {

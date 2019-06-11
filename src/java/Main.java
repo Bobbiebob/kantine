@@ -16,16 +16,6 @@ public class Main {
         Datum datum3 = new Datum(31,2,2000);
         Datum datum4 = new Datum(28,2,2000);
         Datum datum5 = new Datum(29,2,2000);
-        Persoon persoon = new Persoon(15465465, "henk", "tank", datum1, 'm');
-        Dienblad dienblad = new Dienblad(persoon);
-
-
-        kantine.loopPakSluitAan(persoon, artikelen);
-        System.out.println("Nieuw persoon sluit aan...");
-        kantine.verwerkRijVoorKassa();
-        System.out.println("Rij laten afrekenen...");
-        System.out.println("Er zijn " + kantine.getKassa().aantalArtikelen() + " artikelen afgerekend");
-        System.out.println("persoon in kwestie: " + persoon.toString());
 
         /* hier worden de data geretouneerd, komt er de datum 0-0-0 uit dan houdt dit in dat er een foutieve data
            was ingevoerd.
@@ -39,11 +29,17 @@ public class Main {
         System.out.println(datum5.getDatumAsString());
 
         Persoon.Student student = new Persoon.Student(123456,"Zwarte", "Piet",(new Datum(2,3,1998)),'m',321, "Genderwetenschap");
+        student.setBetaalwijze(new Contant());
+        student.getBetaalwijze().setSaldo(100);
         System.out.println("\n"+
                 student.getStudentnummer()+"\n"+
                         student.getBsn_nummer()
         );
         System.out.println("\n"+student.toString()+"\n");
+        kantine.loopPakSluitAan(student,artikelen);
+        kantine.verwerkRijVoorKassa();
+        System.out.println(kantine.getKassa().hoeveelheidGeldInKassa()+" Na studentbetaling in kassa");
+        System.out.println(student.getBetaalwijze().saldo);
 
         double[] tempDouble = {80.5, 80.9, 44.55, 94.48, 48.16, 49.77, 10.99, 81.5, 80.9, 44.55, 94.48, 48.16, 49.77,
                 10.99, 82.5, 80.9, 44.55, 94.48, 48.16, 49.77, 10.99};

@@ -2,6 +2,7 @@ import java.text.DecimalFormat;
 import java.util.Iterator;
 import java.math.*;
 
+
 public class Kassa {
 
     private KassaRij kassarij;
@@ -30,17 +31,22 @@ public class Kassa {
         Betaalwijze betaalwijze = persoon.getBetaalwijze();
 
         //kortingscheck+toepassing
-        if ((persoon.getClass().getInterfaces()[0].getSimpleName()).equals("KortingskaartHouder")){
-            double kortingspercentage = persoon.geefKortingsPercentage();
-            double maximum = 0;
-            if (persoon.heeftMaximum()){
-                maximum = persoon.geefMaximum();
-            }
-            double korting = totaalPrijs-(totaalPrijs*kortingspercentage);
-            totaalPrijs-=korting;
-        }
+        Class[] interfaces = persoon.getClass().getInterfaces();
+
+//        if(interfaces.length>0) {
+//            if ((interfaces[0].getSimpleName()).equals("KortingskaartHouder")) {
+//                double kortingspercentage = persoon.geefKortingsPercentage();
+//                double maximum = 0;
+//                if (persoon.heeftMaximum()) {
+//                    maximum = persoon.geefMaximum();
+//                }
+//                double korting = totaalPrijs - (totaalPrijs * kortingspercentage);
+//                totaalPrijs -= korting;
+//            }
+//        }
 
         //geld afnemen van klant, toevoegen aan kassa
+
         if(!betaalwijze.betaal(totaalPrijs)){
             System.out.println("Betaling niet gelukt");
         } else{

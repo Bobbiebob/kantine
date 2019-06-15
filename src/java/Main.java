@@ -30,7 +30,7 @@ public class Main {
 
         Persoon.Student student = new Persoon.Student(123456,"Zwarte", "Piet",(new Datum(2,3,1998)),'m',321, "Genderwetenschap");
         student.setBetaalwijze(new Contant());
-        student.getBetaalwijze().setSaldo(100);
+        student.getBetaalwijze().setSaldo(1);
         System.out.println("\n"+
                 student.getStudentnummer()+"\n"+
                         student.getBsn_nummer()
@@ -39,7 +39,7 @@ public class Main {
         kantine.loopPakSluitAan(student,artikelen);
         kantine.verwerkRijVoorKassa();
         System.out.println(kantine.getKassa().hoeveelheidGeldInKassa()+" Na studentbetaling in kassa");
-        System.out.println(student.getBetaalwijze().saldo);
+        System.out.println("Nieuw saldo: "+student.getBetaalwijze().saldo);
 
         double[] tempDouble = {80.5, 80.9, 44.55, 94.48, 48.16, 49.77, 10.99, 81.5, 80.9, 44.55, 94.48, 48.16, 49.77,
                 10.99, 82.5, 80.9, 44.55, 94.48, 48.16, 49.77, 10.99};

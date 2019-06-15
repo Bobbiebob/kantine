@@ -12,6 +12,11 @@ public class KantineSimulatie {
         this.kantine = new Kantine();
         this.persoon = new Persoon();
         this.artikelen = new String[]{ "Koffie","Pils 0,33L","Thee","Frisdrank 0,5L"};
+
+        persoon.setAchternaam("Naamloos");
+        Betaalwijze pinpas = new Pinpas();
+        pinpas.setSaldo(100);
+        persoon.setBetaalwijze(pinpas);
     }
 
     /**
@@ -42,7 +47,7 @@ public class KantineSimulatie {
 //            } catch(TeWeinigGeldException e){
 //                System.out.println(persoon.getVoornaam()+persoon.getAchternaam()+e.message);
 //            } catch(Exception e){
-//                System.out.println("Onverwachte fout, probeer opnieuw of roep de systeembeheerder!");
+//                System.out.println("Onverwachte fout: "+e.getClass.getSimpleName());
 //            }
 			kantine.verwerkRijVoorKassa();
 

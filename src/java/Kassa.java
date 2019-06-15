@@ -55,17 +55,21 @@ public class Kassa {
 //            geldInKassa += totaalPrijs;
 //            totaalToegevoegd += totaalPrijs;
 //        }
-
+        boolean genoegGeld = true;
         try{
             betaalwijze.betaal(totaalPrijs);
         } catch(TeWeinigGeldException e){
-          System.out.println(persoon.getVoornaam()+persoon.getAchternaam()+e.message);
+          System.out.println(persoon.getVoornaam()+" "+persoon.getAchternaam()+" "+e.message);
+          genoegGeld = false;
         } catch(Exception e){
-            System.out.println("Onverwachte fout, probeer opnieuw of roep de systeembeheerder!");
+            System.out.println("Onverwachte fout: "+e.getClass().getSimpleName());
+        }finally {
+            if(genoegGeld){
+                totaalAantalArtikelen += aantalArtikelen;
+                geldInKassa += totaalPrijs;
+                totaalToegevoegd += totaalPrijs;
+            }
         }
-        totaalAantalArtikelen += aantalArtikelen;
-        geldInKassa += totaalPrijs;
-        totaalToegevoegd += totaalPrijs;
     }
 
     /**

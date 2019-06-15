@@ -12,6 +12,7 @@ public class Persoon {
         this.achternaam = achternaam;
         this.geboorteDatum = geboorteDatum;
         setGeslacht(geslacht);
+        this.betaalwijze = new Pinpas();
     }
 
     Persoon(long bsn_nummer, String voornaam, String achternaam) {
@@ -20,6 +21,7 @@ public class Persoon {
         this.achternaam = achternaam;
         this.geboorteDatum = new Datum();
         this.geslacht = 'x';
+        this.betaalwijze = new Pinpas();
     }
 
     Persoon() {
@@ -28,6 +30,7 @@ public class Persoon {
         this.achternaam = "";
         this.geboorteDatum = new Datum();
         this.geslacht = 'x';
+        this.betaalwijze = new Pinpas();
     }
 
 

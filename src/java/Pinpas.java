@@ -1,6 +1,6 @@
 public class Pinpas extends Betaalwijze {
 
-    private double kredietlimiet=0;
+    private double kredietlimiet;
 
     /**
      * Methode om kredietlimiet te zetten
@@ -15,11 +15,12 @@ public class Pinpas extends Betaalwijze {
      */
 
     @Override
-    public boolean betaal(double tebetalen) {
+    public void betaal(double tebetalen) throws TeWeinigGeldException {
 	    if (tebetalen <= kredietlimiet && tebetalen <= saldo ) {
 		    saldo -= tebetalen;
-		    return true;
 	    }
-	    else{ return false; }
+	    else{
+	        throw new TeWeinigGeldException("heeft te weinig geld!");
+	    }
     }
 }

@@ -165,6 +165,15 @@ public class KantineSumilation {
             }
 
             // verwerk rij voor de kassa
+
+            // oude variant: error hier opvangen
+//            try{
+//                kantine.verwerkRijVoorKassa();
+//            } catch(TeWeinigGeldException e){
+//                System.out.println(persoon.getVoornaam()+persoon.getAchternaam()+e.message);
+//            } catch(Exception e){
+//                System.out.println("Onverwachte fout, probeer opnieuw of roep de systeembeheerder!");
+//            }
 			kantine.verwerkRijVoorKassa();
 
             // druk de dagtotalen af en hoeveel personen binnen

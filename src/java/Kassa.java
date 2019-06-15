@@ -33,27 +33,39 @@ public class Kassa {
         //kortingscheck+toepassing
         Class[] interfaces = persoon.getClass().getInterfaces();
 
-//        if(interfaces.length>0) {
-//            if ((interfaces[0].getSimpleName()).equals("KortingskaartHouder")) {
-//                double kortingspercentage = persoon.geefKortingsPercentage();
-//                double maximum = 0;
-//                if (persoon.heeftMaximum()) {
-//                    maximum = persoon.geefMaximum();
-//                }
-//                double korting = totaalPrijs - (totaalPrijs * kortingspercentage);
-//                totaalPrijs -= korting;
-//            }
+        if(interfaces.length>0) {
+            if ((interfaces[0].getSimpleName()).equals("KortingskaartHouder")) {
+                double kortingspercentage = persoon.geefKortingsPercentage();
+                double maximum = 0;
+                if (persoon.heeftMaximum()) {
+                    maximum = persoon.geefMaximum();
+                }
+                double korting = totaalPrijs * kortingspercentage;
+                totaalPrijs -= korting;
+            }
+        }
+
+        //geld afnemen van klant, geld toevoegen aan kassa
+
+        // oude variant: betaling afhandelen op basis van returned boolean
+//        if(!betaalwijze.betaal(totaalPrijs)){
+//            System.out.println("Betaling niet gelukt");
+//        } else{
+//            totaalAantalArtikelen += aantalArtikelen;
+//            geldInKassa += totaalPrijs;
+//            totaalToegevoegd += totaalPrijs;
 //        }
 
-        //geld afnemen van klant, toevoegen aan kassa
-
-        if(!betaalwijze.betaal(totaalPrijs)){
-            System.out.println("Betaling niet gelukt");
-        } else{
+        try{
+            betaalwijze.betaal(totaalPrijs);
+        } catch(TeWeinigGeldException e){
+          System.out.println(persoon.getVoornaam()+persoon.getAchternaam()+e.message);
+        } catch(Exception e){
+            System.out.println("Onverwachte fout, probeer opnieuw of roep de systeembeheerder!");
+        }
         totaalAantalArtikelen += aantalArtikelen;
         geldInKassa += totaalPrijs;
         totaalToegevoegd += totaalPrijs;
-        }
     }
 
     /**

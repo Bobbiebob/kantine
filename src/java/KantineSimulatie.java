@@ -35,7 +35,17 @@ public class KantineSimulatie {
             }
 
             // verwerk rij voor de kassa
+
+            // oude variant: error hier opvangen
+//            try{
+//                kantine.verwerkRijVoorKassa();
+//            } catch(TeWeinigGeldException e){
+//                System.out.println(persoon.getVoornaam()+persoon.getAchternaam()+e.message);
+//            } catch(Exception e){
+//                System.out.println("Onverwachte fout, probeer opnieuw of roep de systeembeheerder!");
+//            }
 			kantine.verwerkRijVoorKassa();
+
             // toon dagtotalen (artikelen en geld in kassa)
 			System.out.println("dag: " + i + " bedrag in kassa: " + kantine.getKassa().hoeveelheidGeldInKassa());
 			System.out.println("artikelen verkocht: " + kantine.getKassa().aantalArtikelen());

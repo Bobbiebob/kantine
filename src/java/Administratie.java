@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 public class Administratie {
 
 	private static final int DAYSINWEEK = 7;
@@ -69,4 +71,9 @@ public class Administratie {
         }
         return temp;
     }
+
+	static double valutaRoundingPrint(double money){
+		DecimalFormat df = new DecimalFormat("#.00");
+		return Double.parseDouble(df.format(money));
+	}
 }

@@ -14,10 +14,8 @@ public class KantineSumilation {
 
     // random generator
     private Random random;
-    private Persoon persoon;
 
-    // aantal artikelen
-    private static final int AANTAL_ARTIKELEN = 4;
+    // aantal personen
     private static int student = 89;
     private static int docent = 10;
     private static int kantinemedewerker = 1;
@@ -25,6 +23,7 @@ public class KantineSumilation {
     // artikelen
     private static final String[] artikelnamen = new String[]
         {"Koffie", "Broodje pinkakaas", "Broodje kaas", "Appelsap"};
+    private int aantalArtikelen;
 
     // prijzen
     private static double[] artikelprijzen = new double[]{1.50, 2.10, 1.65, 1.65};
@@ -53,8 +52,9 @@ public class KantineSumilation {
     private KantineSumilation() {
         kantine = new Kantine();
         random = new Random();
+        this.aantalArtikelen = artikelnamen.length;
         int[] hoeveelheden = getRandomArray(
-            AANTAL_ARTIKELEN,
+            aantalArtikelen,
             MIN_ARTIKELEN_PER_SOORT,
             MAX_ARTIKELEN_PER_SOORT);
         kantineaanbod = new KantineAanbod(
@@ -141,42 +141,38 @@ public class KantineSumilation {
             int aantalpersonen = student + docent + kantinemedewerker;
 
             for(int j = 0; j < student; j++) {
-                this.persoon = new Persoon.Student();
-            }
-
-            for(int j = 0; j < docent; j++) {
-                this.persoon = new Persoon.Docent();
-            }
-
-            for(int j = 0; j < kantinemedewerker; j++) {
-                this.persoon = new Persoon.KantineMedewerker();
-            }
-
-
-            // laat de personen maar komen...
-            for(int j = 0; j < aantalpersonen; j++) {
-
-                // maak persoon en dienblad aan, koppel ze
-                // en bedenk hoeveel artikelen worden gepakt
-
-	            Dienblad dienblad = new Dienblad(persoon);
-                int aantalartikelen = getRandomValue(1,30) ;
-
-                // genereer de "artikelnummers", dit zijn indexen
-                // van de artikelnamen
-                int[] tepakken = getRandomArray(
-                    aantalartikelen, 0, AANTAL_ARTIKELEN-1);
-
-                // vind de artikelnamen op basis van
-                // de indexen hierboven
-                String[] artikelen = geefArtikelNamen(tepakken);
+                Persoon persoon = new Persoon.Student();
+                //todo: genereer naam
+                persoon.setVoornaam("Bertha");
+                persoon.setAchternaam(Integer.toString((i+1)*j));
 
                 // loop de kantine binnen, pak de gewenste
                 // artikelen, sluit aan
-	            kantine.loopPakSluitAan(persoon, artikelen);
-
-
+                kantine.loopPakSluitAan(persoon, genereerArtikelen(persoon));
             }
+
+            for(int j = 0; j < docent; j++) {
+                Persoon persoon = new Persoon.Docent();
+                //todo: genereer naam
+                persoon.setVoornaam("Jan");
+                persoon.setAchternaam(Integer.toString((i+1)*j));
+
+                // loop de kantine binnen, pak de gewenste
+                // artikelen, sluit aan
+                kantine.loopPakSluitAan(persoon, genereerArtikelen(persoon));
+            }
+
+            for(int j = 0; j < kantinemedewerker; j++) {
+                Persoon persoon = new Persoon.KantineMedewerker();
+                //todo: genereer naam
+                persoon.setVoornaam("Gerardus");
+                persoon.setAchternaam(Integer.toString((i+1)*j));
+
+                // loop de kantine binnen, pak de gewenste
+                // artikelen, sluit aan
+                kantine.loopPakSluitAan(persoon, genereerArtikelen(persoon));
+            }
+
 
             // verwerk rij voor de kassa
 
@@ -191,7 +187,7 @@ public class KantineSumilation {
 			kantine.verwerkRijVoorKassa();
 
             // druk de dagtotalen af en hoeveel personen binnen
-	        System.out.println("dag: " + i + " bedrag in kassa: " + valutaRoundingPrint(kantine.getKassa().hoeveelheidGeldInKassa()));
+	        System.out.println("\ndag " + (i+1) + " - bedrag in kassa: " + Administratie.valutaRoundingPrint(kantine.getKassa().hoeveelheidGeldInKassa()));
 	        System.out.println("artikelen verkocht: " + kantine.getKassa().aantalArtikelen());
 
 	        // zijn gekomen
@@ -208,10 +204,11 @@ public class KantineSumilation {
             System.out.println("");
         }
         //opgave 4c dag/week waarden afdrukken
-        System.out.println("gemiddelde omzet " + valutaRoundingPrint(Administratie.berekenGemiddeldeOmzet(omzet)));
-        System.out.println("gemiddelde aantal " + valutaRoundingPrint(Administratie.berekenGemiddeldAantal(aantal)));
+        System.out.println("gemiddelde omzet " + Administratie.valutaRoundingPrint(Administratie.berekenGemiddeldeOmzet(omzet)));
+        System.out.println("gemiddelde aantal " + Administratie.valutaRoundingPrint(Administratie.berekenGemiddeldAantal(aantal))+"\n");
         double[] dagomzetarray = Administratie.berekenDagOmzet(omzet);
 
+        //print totaalomzet voor specifieke dagen
         int counter = 1;
         for (double dagOmzet : dagomzetarray) {
             switch(counter){
@@ -230,9 +227,25 @@ public class KantineSumilation {
                 case 7: System.out.print("Zondag ");
                         break;
             }
-            System.out.println("dag omzet " + valutaRoundingPrint(dagOmzet));
+            System.out.println("dag omzet: " + Administratie.valutaRoundingPrint(dagOmzet));
             counter++;
         }
+    }
+
+    private String[] genereerArtikelen(Persoon persoon){
+
+        // bedenk hoeveel artikelen worden gepakt
+        int aantalartikelen = getRandomValue(1,8) ;
+
+        // genereer de "artikelnummers", dit zijn indexen
+        // van de artikelnamen
+        int[] tepakken = getRandomArray(
+                aantalartikelen, 0, aantalArtikelen-1);
+
+        // vind de artikelnamen op basis van
+        // de indexen hierboven
+        return geefArtikelNamen(tepakken);
+
     }
 
     /**
@@ -256,11 +269,6 @@ public class KantineSumilation {
             }
         }
 
-    }
-
-    private double valutaRoundingPrint(double money){
-        DecimalFormat df = new DecimalFormat("#.00");
-        return Double.parseDouble(df.format(money));
     }
 
     public static void main(String[] args) {

@@ -30,6 +30,8 @@ public class Kassa {
         Persoon persoon = klant.getKlant();
         Betaalwijze betaalwijze = persoon.getBetaalwijze();
 
+        //System.out.println(persoon.getVoornaam()+persoon.getAchternaam()+" heeft "+aantalArtikelen+" artikelen gepakt voor "+totaalPrijs);
+
         //kortingscheck+toepassing
         Class[] interfaces = persoon.getClass().getInterfaces();
 
@@ -43,6 +45,8 @@ public class Kassa {
                 double korting = totaalPrijs * kortingspercentage;
                 totaalPrijs -= korting;
             }
+            //totaalPrijs = Administratie.valutaRoundingPrint(totaalPrijs);
+            //System.out.println(persoon.getVoornaam()+persoon.getAchternaam()+" heeft "+aantalArtikelen+" artikelen met "+persoon.geefKortingsPercentage()*100+ "% korting gepakt voor "+totaalPrijs);
         }
 
         //geld afnemen van klant, geld toevoegen aan kassa
@@ -57,7 +61,7 @@ public class Kassa {
 //        }
         boolean genoegGeld = true;
         try{
-            betaalwijze.betaal(totaalPrijs);
+            betaalwijze.betaal(Administratie.valutaRoundingPrint(totaalPrijs));
         } catch(TeWeinigGeldException e){
           System.out.println(persoon.getVoornaam()+" "+persoon.getAchternaam()+" "+e.message);
           genoegGeld = false;

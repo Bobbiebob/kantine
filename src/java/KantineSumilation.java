@@ -1,5 +1,8 @@
 import java.text.DecimalFormat;
 import java.util.*;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
 public class KantineSumilation {
 
@@ -38,7 +41,10 @@ public class KantineSumilation {
     private static final int MIN_ARTIKELEN_PER_PERSOON = 1;
     private static final int MAX_ARTIKELEN_PER_PERSOON = 4;
 
-
+    // database spul
+    private static final EntityManagerFactory ENTITY_MANAGER_FACTORY=
+            Persistence.createEntityManagerFactory("KantineSimulatie");
+    private EntityManager manager;
 
     /**
      * Constructor
@@ -53,9 +59,17 @@ public class KantineSumilation {
             MAX_ARTIKELEN_PER_SOORT);
         kantineaanbod = new KantineAanbod(
             artikelnamen, artikelprijzen, hoeveelheden);
-
         kantine.setAanbod(kantineaanbod);
+
+        //start db verbinding
+        manager = ENTITY_MANAGER_FACTORY.createEntityManager();
+
+        //run
         simuleer(getRandomValue(1,14));
+
+        //stop db verbinding
+        manager.close();
+        ENTITY_MANAGER_FACTORY.close();
     }
 
     /**

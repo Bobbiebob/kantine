@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+    xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+    <persistence-unit name="KantineSimulatie">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <!--class>?</class>
+        <class>?</class-->
+        <properties>
+            <!-- The JDBC driver of your database -->
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+
+            <!-- PostgreSQL JDBC driver example -->
+            <!--
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+            -->
+
+            <!-- The JDBC URL to the database instance -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://217.101.229.171:55550/kantinesimulatie" />
+
+            <!-- PostgreSQL JDBC connection url example -->
+            <!--
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://10.172.60.91:5432/jpatest" />
+            -->
+
+            <!-- The database username -->
+            <!-- VERVANG DEZE WAARDEN MET DE GELDENDE WAARDEN OP JE EIGEN SYSTEEM -->
+            <property name="javax.persistence.jdbc.user" value="project" />
+
+            <!-- The database password -->
+            <!-- VERVANG DEZE WAARDEN MET DE GELDENDE WAARDEN OP JE EIGEN SYSTEEM -->
+            <property name="javax.persistence.jdbc.password" value="12drievier56" />
+
+            <property name="hibernate.connection.charSet" value="UTF-8" />
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+        </properties>
+    </persistence-unit>
+</persistence>

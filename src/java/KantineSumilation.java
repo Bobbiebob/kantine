@@ -1,4 +1,3 @@
-import java.text.DecimalFormat;
 import java.util.*;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -76,9 +75,9 @@ public class KantineSumilation {
      * Methode om een array van random getallen liggend tussen
      * min en max van de gegeven lengte te genereren
      *
-     * @param lengte
-     * @param min
-     * @param max
+     * @param lengte Aantal getallen om te genereren
+     * @param min Minimumwaarde
+     * @param max Maximumwaarde
      * @return De array met random getallen
      */
     private int[] getRandomArray(int lengte, int min, int max) {
@@ -94,8 +93,8 @@ public class KantineSumilation {
      * Methode om een random getal tussen min(incl)
      * en max(incl) te genereren.
      *
-     * @param min
-     * @param max
+     * @param min Minimumwaarde
+     * @param max Maximumwaarde
      * @return Een random getal
      */
     private int getRandomValue(int min, int max) {
@@ -106,7 +105,7 @@ public class KantineSumilation {
      * Methode om op basis van een array van indexen voor de array
      * artikelnamen de bijhorende array van artikelnamen te maken
      *
-     * @param indexen
+     * @param indexen Array met posities om uit kantineaanbod artikelarray te halen
      * @return De array met artikelnamen
      */
     private String[] geefArtikelNamen(int[] indexen) {
@@ -124,7 +123,7 @@ public class KantineSumilation {
      * Deze methode simuleert een aantal dagen
      * in het verloop van de kantine
      *
-     * @param dagen
+     * @param dagen Aantal dagen om te simuleren
      */
     private void simuleer(int dagen) {
         // for lus voor dagen
@@ -142,35 +141,35 @@ public class KantineSumilation {
 
             for(int j = 0; j < student; j++) {
                 Persoon persoon = new Persoon.Student();
-                //todo: genereer naam
+                //genereer naam
                 persoon.setVoornaam("Bertha");
                 persoon.setAchternaam(Integer.toString((i+1)*j));
 
                 // loop de kantine binnen, pak de gewenste
                 // artikelen, sluit aan
-                kantine.loopPakSluitAan(persoon, genereerArtikelen(persoon));
+                kantine.loopPakSluitAan(persoon, genereerArtikelen());
             }
 
             for(int j = 0; j < docent; j++) {
                 Persoon persoon = new Persoon.Docent();
-                //todo: genereer naam
+                //genereer naam
                 persoon.setVoornaam("Jan");
                 persoon.setAchternaam(Integer.toString((i+1)*j));
 
                 // loop de kantine binnen, pak de gewenste
                 // artikelen, sluit aan
-                kantine.loopPakSluitAan(persoon, genereerArtikelen(persoon));
+                kantine.loopPakSluitAan(persoon, genereerArtikelen());
             }
 
             for(int j = 0; j < kantinemedewerker; j++) {
                 Persoon persoon = new Persoon.KantineMedewerker();
-                //todo: genereer naam
+                //genereer naam
                 persoon.setVoornaam("Gerardus");
                 persoon.setAchternaam(Integer.toString((i+1)*j));
 
                 // loop de kantine binnen, pak de gewenste
                 // artikelen, sluit aan
-                kantine.loopPakSluitAan(persoon, genereerArtikelen(persoon));
+                kantine.loopPakSluitAan(persoon, genereerArtikelen());
             }
 
 
@@ -201,7 +200,7 @@ public class KantineSumilation {
             kantine.resetKassa();
 
             //enter invoegen voor de volgende dag
-            System.out.println("");
+            System.out.println();
         }
         //opgave 4c dag/week waarden afdrukken
         System.out.println("gemiddelde omzet " + Administratie.valutaRoundingPrint(Administratie.berekenGemiddeldeOmzet(omzet)));
@@ -232,7 +231,7 @@ public class KantineSumilation {
         }
     }
 
-    private String[] genereerArtikelen(Persoon persoon){
+    private String[] genereerArtikelen(){
 
         // bedenk hoeveel artikelen worden gepakt
         int aantalartikelen = getRandomValue(1,8) ;
@@ -252,7 +251,7 @@ public class KantineSumilation {
      * opgave 5, deze methode genereerd met een max aan gegeven aantal, drie verschillende personen.
      * Dit gebeurt aan de hand van een kans die er in zit hoeveel een bepaald persoon voor mag komen
      * per 100 personen
-     * @param maxAmountToGenereate
+     * @param maxAmountToGenereate nummer om onder te verdelen naar specifieke persoontypen
      */
     private void personGenerator(int maxAmountToGenereate){
         int aantal = random.nextInt(maxAmountToGenereate);

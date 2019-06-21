@@ -1,14 +1,19 @@
 import java.text.DecimalFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Iterator;
 import java.math.*;
+
+import static java.time.LocalDateTime.now;
 
 
 public class Kassa {
 
     private KassaRij kassarij;
-    private int totaalAantalArtikelen=0;
-    private double geldInKassa=100;
-    private double totaalToegevoegd=0;
+    private int totaalAantalArtikelen = 0;
+    private double geldInKassa = 100;
+    private double totaalToegevoegd = 0;
+    private double totaalGegevenKorting = 0;
 
     public Kassa(KassaRij kassarij) {
         this.kassarij = kassarij;
@@ -24,54 +29,33 @@ public class Kassa {
      * @param klant die moet afrekenen
      */
     void rekenAf(Dienblad klant) {
+
         //gegevens halen
-        double totaalPrijs = getTotaalPrijs(klant);
-        int aantalArtikelen = getAantalArtikelen(klant);
         Persoon persoon = klant.getKlant();
+        int aantalArtikelen = klant.getArtikelen().size();
         Betaalwijze betaalwijze = persoon.getBetaalwijze();
+        LocalDateTime datum = now();
+        Factuur factuur = new Factuur(klant,datum);
+        double totaalPrijs = factuur.getTotaal();
 
         //System.out.println(persoon.getVoornaam()+persoon.getAchternaam()+" heeft "+aantalArtikelen+" artikelen gepakt voor "+totaalPrijs);
 
-        //kortingscheck+toepassing
-        Class[] interfaces = persoon.getClass().getInterfaces();
-
-        if(interfaces.length>0) {
-            if ((interfaces[0].getSimpleName()).equals("KortingskaartHouder")) {
-                double kortingspercentage = persoon.geefKortingsPercentage();
-                double maximum = 0;
-                if (persoon.heeftMaximum()) {
-                    maximum = persoon.geefMaximum();
-                }
-                double korting = totaalPrijs * kortingspercentage;
-                totaalPrijs -= korting;
-            }
-            //totaalPrijs = Administratie.valutaRoundingPrint(totaalPrijs);
-            //System.out.println(persoon.getVoornaam()+persoon.getAchternaam()+" heeft "+aantalArtikelen+" artikelen met "+persoon.geefKortingsPercentage()*100+ "% korting gepakt voor "+totaalPrijs);
-        }
-
-        //geld afnemen van klant, geld toevoegen aan kassa
-
-        // oude variant: betaling afhandelen op basis van returned boolean
-//        if(!betaalwijze.betaal(totaalPrijs)){
-//            System.out.println("Betaling niet gelukt");
-//        } else{
-//            totaalAantalArtikelen += aantalArtikelen;
-//            geldInKassa += totaalPrijs;
-//            totaalToegevoegd += totaalPrijs;
-//        }
         boolean genoegGeld = true;
-        try{
+        try {
             betaalwijze.betaal(Administratie.valutaRoundingPrint(totaalPrijs));
-        } catch(TeWeinigGeldException e){
-          System.out.println(persoon.getVoornaam()+" "+persoon.getAchternaam()+" "+e.message);
-          genoegGeld = false;
-        } catch(Exception e){
-            System.out.println("Onverwachte fout: "+e.getClass().getSimpleName());
-        }finally {
-            if(genoegGeld){
+        } catch (TeWeinigGeldException e) {
+            System.out.println(persoon.getVoornaam() + " " + persoon.getAchternaam() + " " + e.message);
+            genoegGeld = false;
+        } catch (Exception e) {
+            System.out.println("Onverwachte fout: " + e.getClass().getSimpleName());
+        } finally {
+            if (genoegGeld) {
                 totaalAantalArtikelen += aantalArtikelen;
                 geldInKassa += totaalPrijs;
                 totaalToegevoegd += totaalPrijs;
+                totaalGegevenKorting += factuur.getGegevenKorting();
+                factuur.setBetaald(true);
+
             }
         }
     }
@@ -84,6 +68,10 @@ public class Kassa {
      */
     int aantalArtikelen() {
         return totaalAantalArtikelen;
+    }
+
+    double getTotaalGegevenKorting(){
+        return totaalGegevenKorting;
     }
 
     /**
@@ -105,31 +93,6 @@ public class Kassa {
         geldInKassa -= totaalToegevoegd;
         totaalToegevoegd = 0;
         totaalAantalArtikelen = 0;
-    }
-
-
-    /**
-     * Methode om de totaalprijs van de artikelen
-     * op dienblad uit te rekenen
-     *
-     * @return
-     */
-    private double getTotaalPrijs(Dienblad klant) {
-        Iterator<Artikel> it = klant.getArtikelen().iterator();
-        double totaalprijs = 0;
-        while (it.hasNext()){
-            Artikel artikel = it.next();
-            totaalprijs+=artikel.getPrice();
-        }
-        return totaalprijs;
-    }
-
-    /**
-     * Methode om aantal artikelen op dienblad te tellen
-     * @param klant
-     * @return int aantal artikelen
-     */
-    private int getAantalArtikelen(Dienblad klant){
-        return klant.getArtikelen().size();
+        totaalGegevenKorting = 0;
     }
 }

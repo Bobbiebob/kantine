@@ -1,3 +1,5 @@
+import javax.persistence.EntityManager;
+
 public class Kantine {
 
     private Kassa kassa;
@@ -11,9 +13,9 @@ public class Kantine {
     /**
      * Constructor
      */
-    Kantine() {
+    Kantine(EntityManager manager) {
         kassarij = new KassaRij();
-        kassa = new Kassa(kassarij);
+        kassa = new Kassa(kassarij,manager);
         prijzen = new double[] {1.00,1.50,0.80,1.20,1.10,3.00,2.50,2.00,1.40,5.00};
         voorraad = new int[] {1000,1000,1000,200,200,100,100,100,600,50};
         artikelnamen = new String[] {"Koffie","Pils 0,33L","Thee","Frisdrank 0,5L","Water 0,5L","Broodje gezond","Bakje patat","Appeltaartpunt","Pizzapunt","Salade"};

@@ -2,6 +2,7 @@ import java.util.*;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 
 public class KantineSumilation {
 
@@ -49,7 +50,11 @@ public class KantineSumilation {
      *
      */
     private KantineSumilation() {
-        kantine = new Kantine();
+        //start db verbinding & verwijder vorige run
+        manager = ENTITY_MANAGER_FACTORY.createEntityManager();
+
+        //initialiseer sumilation
+        kantine = new Kantine(manager);
         random = new Random();
         this.aantalArtikelen = artikelnamen.length;
         int[] hoeveelheden = getRandomArray(
@@ -59,9 +64,6 @@ public class KantineSumilation {
         kantineaanbod = new KantineAanbod(
             artikelnamen, artikelprijzen, hoeveelheden);
         kantine.setAanbod(kantineaanbod);
-
-        //start db verbinding
-        manager = ENTITY_MANAGER_FACTORY.createEntityManager();
 
         //run
         simuleer(getRandomValue(1,14));

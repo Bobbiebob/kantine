@@ -1,11 +1,7 @@
-import java.text.DecimalFormat;
-import java.time.LocalDate;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
 import java.time.LocalDateTime;
-import java.util.Iterator;
-import java.math.*;
-
 import static java.time.LocalDateTime.now;
-
 
 public class Kassa {
 
@@ -14,9 +10,11 @@ public class Kassa {
     private double geldInKassa = 100;
     private double totaalToegevoegd = 0;
     private double totaalGegevenKorting = 0;
+    private EntityManager manager;
 
-    public Kassa(KassaRij kassarij) {
+    public Kassa(KassaRij kassarij, EntityManager manager) {
         this.kassarij = kassarij;
+        this.manager = manager;
 
     }
 
@@ -54,7 +52,7 @@ public class Kassa {
                 geldInKassa += totaalPrijs;
                 totaalToegevoegd += totaalPrijs;
                 totaalGegevenKorting += factuur.getGegevenKorting();
-                factuur.setBetaald(true);
+                create(factuur);
 
             }
         }
@@ -94,5 +92,27 @@ public class Kassa {
         totaalToegevoegd = 0;
         totaalAantalArtikelen = 0;
         totaalGegevenKorting = 0;
+    }
+
+    /**
+     * Create a new Factuur.
+     *
+     * @param factuur
+     */
+    public void create(Factuur factuur) {
+        EntityTransaction transaction = null;
+        try {
+            // Get a transaction, sla de factuur gegevens op en commit de transactie
+            transaction = manager.getTransaction();
+            transaction.begin();
+            manager.persist(factuur);
+            transaction.commit();
+        } catch (Exception ex) {
+            // If there are any exceptions, roll back the changes
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            ex.printStackTrace();
+        }
     }
 }

@@ -1,3 +1,6 @@
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import java.text.DecimalFormat;
 public class Main {
 
@@ -6,9 +9,18 @@ public class Main {
      * de uit komsten van de andere klassen te kunnen controleren.
      * @param args
      */
+
+    // database spul
+    private static final EntityManagerFactory ENTITY_MANAGER_FACTORY=
+            Persistence.createEntityManagerFactory("KantineSimulatie");
+    private static EntityManager manager;
+
     public static void main(String[] args) {
 
-        Kantine kantine = new Kantine();
+        //start db verbinding
+        manager = ENTITY_MANAGER_FACTORY.createEntityManager();
+
+        Kantine kantine = new Kantine(manager);
         String[] artikelen = {"Koffie","Bakje patat","Thee"};
         Datum datum = new Datum(56,23,2000);
         Datum datum1 = new Datum(31,3,2000);
@@ -47,20 +59,19 @@ public class Main {
         int[] tempInt2 = {45, 56};
         int counter = 0;
         for (double totaal: Administratie.dagTotalenGemiddelde(tempDouble)) {
-            System.out.println("dag " + counter + " totaal gemiddelde " + valutaRoundingPrint(totaal));
+            System.out.println("dag " + counter + " totaal gemiddelde " + Administratie.valutaRoundingPrint(totaal));
             counter++;
         }
         counter = 0;
         for (double totaal: Administratie.berekenDagOmzet(tempDouble)) {
-            System.out.println("dag " + counter + " totaal " + valutaRoundingPrint(totaal));
+            System.out.println("dag " + counter + " totaal " + Administratie.valutaRoundingPrint(totaal));
             counter++;
         }
         System.out.println(Administratie.berekenGemiddeldAantal(tempInt2));
-        System.out.println("rounded decimal " + valutaRoundingPrint(Administratie.berekenGemiddeldeOmzet(tempDouble)));
-    }
+        System.out.println("rounded decimal " + Administratie.valutaRoundingPrint(Administratie.berekenGemiddeldeOmzet(tempDouble)));
 
-    private static String valutaRoundingPrint(double money){
-        DecimalFormat df = new DecimalFormat("#.00");
-        return df.format(money);
+        //stop db verbinding
+        manager.close();
+        ENTITY_MANAGER_FACTORY.close();
     }
 }

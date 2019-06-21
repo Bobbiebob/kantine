@@ -1,3 +1,7 @@
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
 public class KantineSimulatie {
 
     private Kantine kantine;
@@ -5,11 +9,19 @@ public class KantineSimulatie {
     private String[] artikelen;
     private static final int DAGEN = 7;
 
+    // database spul
+    private static final EntityManagerFactory ENTITY_MANAGER_FACTORY=
+            Persistence.createEntityManagerFactory("KantineSimulatie");
+    private static EntityManager manager;
+
     /**
      * Constructor
      */
     private KantineSimulatie() {
-        this.kantine = new Kantine();
+        //start db verbinding & verwijder vorige run
+        manager = ENTITY_MANAGER_FACTORY.createEntityManager();
+
+        this.kantine = new Kantine(manager);
         this.persoon = new Persoon();
         this.artikelen = new String[]{ "Koffie","Pils 0,33L","Thee","Frisdrank 0,5L"};
 
@@ -71,5 +83,8 @@ public class KantineSimulatie {
             dagen = Integer.parseInt(args[0]);
         }
         new KantineSimulatie().simuleer(dagen);
+        //stop db verbinding
+        manager.close();
+        ENTITY_MANAGER_FACTORY.close();
     }
 }

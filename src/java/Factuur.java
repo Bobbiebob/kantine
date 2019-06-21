@@ -1,12 +1,15 @@
-import javax.persistence.Column;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Iterator;
 
+@Entity
+@Table(name = "factuur")
+
 public class Factuur implements Serializable {
     @Id
-    @Column(name = "id", unique = true)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", unique = true, updatable = false,nullable = false)
     private long id;
 
     @Column(name="datum",nullable=false)
@@ -17,9 +20,6 @@ public class Factuur implements Serializable {
 
     @Column(name="totaal",nullable = false)
     private double totaal;
-
-    @Column(name="is_betaald")
-    private boolean isBetaald = false;
 
     public Factuur(){
         totaal = 0;
@@ -91,10 +91,6 @@ public class Factuur implements Serializable {
 
     public double getTotaal(){
         return totaal;
-    }
-
-    public void setBetaald(boolean bool){
-        this.isBetaald = bool;
     }
 
     public String toString(){

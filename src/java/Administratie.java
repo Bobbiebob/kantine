@@ -64,7 +64,7 @@ public class Administratie {
 	        int j = 0;
         	int counter = i + DAYSINWEEK * j;
             while(counter < omzet.length) {
-		        temp[i] += omzet[i + 7 * j];
+		        temp[i] += omzet[i + DAYSINWEEK * j];
 		        j++;
 	            counter = i + DAYSINWEEK * j;
             }

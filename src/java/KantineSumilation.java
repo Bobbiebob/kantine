@@ -44,6 +44,7 @@ public class KantineSumilation {
     private static final EntityManagerFactory ENTITY_MANAGER_FACTORY=
             Persistence.createEntityManagerFactory("KantineSimulatie");
     private EntityManager manager;
+    private ReadDB readDB = new ReadDB();
 
     /**
      * Constructor
@@ -230,6 +231,20 @@ public class KantineSumilation {
             }
             System.out.println("dag omzet: " + Administratie.valutaRoundingPrint(dagOmzet));
             counter++;
+        }
+
+        //opgave 3 week 6
+        Double revenue = readDB.getTotalRevenue();
+        Double discount = readDB.getTotalDiscount();
+        Double avgRevenue = readDB.getAVGRevenue();
+        Double discountFactuur = readDB.getFactuur();
+        String[] topDrie = readDB.getTopThree();
+        System.out.println("totale opbrengst = " + Administratie.valutaRoundingPrint(revenue));
+        System.out.println("totale gegeven korting = " + Administratie.valutaRoundingPrint(discount));
+        System.out.println("gemiddelde opbrengst = " + Administratie.valutaRoundingPrint(avgRevenue));
+        System.out.println("factuur nummer: " + readDB.factuurNummer + " korting bij factuur = " + Administratie.valutaRoundingPrint(discountFactuur));
+        for (String toPrint: topDrie) {
+            System.out.println(toPrint);
         }
     }
 

@@ -1,7 +1,10 @@
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
+import java.util.List;
 
 @Entity
 @Table(name = "factuur")
@@ -21,9 +24,13 @@ public class Factuur implements Serializable {
     @Column(name="totaal",nullable = false)
     private double totaal;
 
+    @OneToMany(targetEntity = FactuurRegel.class, mappedBy = "factuur",cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<FactuurRegel> regels;
+
     public Factuur(){
         totaal = 0;
         gegevenKorting = 0;
+        regels = new ArrayList<>();
     }
 
     public Factuur(Dienblad klant, LocalDateTime datum){
@@ -81,6 +88,7 @@ public class Factuur implements Serializable {
         while (it.hasNext()){
             Artikel artikel = it.next();
             totaalprijs+=artikel.getPrice();
+            regels.add(new FactuurRegel(this, artikel));
         }
         return totaalprijs;
     }
@@ -94,7 +102,15 @@ public class Factuur implements Serializable {
     }
 
     public String toString(){
-        String returnstring= "Bestelling ID: "+id+", datum: "+datum+", gegeven korting: "+gegevenKorting+", totaal betaald: "+totaal;
+        String returnstring= "Bestelling ID: "+id+",\n" +
+                "Datum: "+datum+",\n" +
+                "Artikelen:\n\n";
+        for(FactuurRegel regel:regels){
+            returnstring+=regel.toString()+"\n";
+        }
+        returnstring+="gegeven korting: "+gegevenKorting+",\n" +
+                "totaal betaald: "+totaal;
+
         return returnstring;
     }
 }

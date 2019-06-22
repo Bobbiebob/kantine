@@ -1,8 +1,5 @@
 import java.util.*;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.Query;
+import javax.persistence.*;
 
 public class KantineSumilation {
 
@@ -271,6 +268,7 @@ public class KantineSumilation {
         }
 
     }
+
 
     public static void main(String[] args) {
         new KantineSumilation();

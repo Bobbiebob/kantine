@@ -5,6 +5,8 @@
     <persistence-unit name="KantineSimulatie">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <class>Factuur</class>
+        <class>FactuurRegel</class>
+        <class>Artikel</class>
 
         <properties>
             <!-- The JDBC driver of your database -->

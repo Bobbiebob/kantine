@@ -97,15 +97,15 @@ public class Kassa {
     /**
      * Create a new Factuur.
      *
-     * @param factuur
+     * @param object het object om toe te voegen aan de db
      */
-    public void create(Factuur factuur) {
+    public void create(Object object) {
         EntityTransaction transaction = null;
         try {
             // Get a transaction, sla de factuur gegevens op en commit de transactie
             transaction = manager.getTransaction();
             transaction.begin();
-            manager.persist(factuur);
+            manager.persist(object);
             transaction.commit();
         } catch (Exception ex) {
             // If there are any exceptions, roll back the changes

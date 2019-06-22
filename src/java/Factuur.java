@@ -13,7 +13,7 @@ public class Factuur implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", unique = true, updatable = false,nullable = false)
-    private long id;
+    private Long id;
 
     @Column(name="datum",nullable=false)
     private LocalDateTime datum;

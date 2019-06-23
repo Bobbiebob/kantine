@@ -1,24 +1,20 @@
 import java.io.Serializable;
-import java.io.*;
 import java.lang.*;
-import java.util.Arrays;
 import java.util.List;
 import java.lang.Math;
 import java.util.Random;
-import javax.persistence.TypedQuery;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 import javax.persistence.EntityManager;
-import javax.persistence.EntityTransaction;
 import javax.persistence.EntityManagerFactory;
 
 class ReadDB implements Serializable{
 
 	private static final EntityManagerFactory ENTITY_MANAGER_FACTORY=
 			Persistence.createEntityManagerFactory("KantineSimulatie");
-	private EntityManager manager = ENTITY_MANAGER_FACTORY.createEntityManager();;
+	private EntityManager manager = ENTITY_MANAGER_FACTORY.createEntityManager();
 	private Random random;
-	Long factuurNummerMax;
+	private Long factuurNummerMax;
 	int factuurNummer;
 
 	Double getTotalRevenue(){
@@ -67,5 +63,13 @@ class ReadDB implements Serializable{
 			toReturn[i] = "Datum: " + resultList.get(i)[0] + " Gegeven Korting: " + resultList.get(i)[1] + " Factuur totaal: " + resultList.get(i)[2];
 		}
 		return toReturn;
+	}
+
+	String getArtikel(Long factuurRegelNummer){
+		long nummer = factuurRegelNummer;
+		Query query = manager.createQuery(
+				"SELECT a.name FROM Artikel a JOIN FactuurRegel fr ON a.artikelId = fr.artikel Where factuurRegelId = :nummer");
+		String result = (String) query.getSingleResult();
+		return result;
 	}
 }

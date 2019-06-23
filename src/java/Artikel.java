@@ -1,18 +1,16 @@
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name = "artikel")
 public class Artikel implements Serializable {
 
 	@Id
-	@Column(name = "id", unique = true, updatable = false,nullable = false)
-	private long id;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "artikelId", unique = true, updatable = false,nullable = false)
+	private long artikelId;
 
-	@Column(name="naam",nullable = false, unique = true)
+	@Column(name="naam",nullable = false)
 	private String name;
 
 	@Column(name = "prijs")
@@ -22,7 +20,6 @@ public class Artikel implements Serializable {
 	Artikel(String name, double price) {
 		this.name = name;
 		this.price = price;
-
 	}
 
 	public Artikel(){	}

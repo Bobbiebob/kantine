@@ -101,12 +101,13 @@ public class Factuur implements Serializable {
         return totaal;
     }
 
+    @Override
     public String toString(){
-        String returnstring= "Bestelling ID: "+id+",\n" +
-                "Datum: "+datum+",\n" +
+        String returnstring= "Bestelling ID: " + id + ",\n" +
+                "Datum: " + datum + ",\n" +
                 "Artikelen:\n\n";
         for(FactuurRegel regel:regels){
-            returnstring+=regel.toString()+"\n";
+            returnstring += regel.toString() + "\n";
         }
         returnstring+="gegeven korting: "+gegevenKorting+",\n" +
                 "totaal betaald: "+totaal;

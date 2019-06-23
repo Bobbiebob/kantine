@@ -48,7 +48,8 @@ class ReadDB implements Serializable{
 		} while(factuurNummerMax <= factuurNummer && factuurNummer >= 0);
 
 		Query query = manager.createQuery(
-				"SELECT f.gegevenKorting FROM Factuur f  WHERE f.id = 1");
+				//"SET a := factuurNummer" +
+						"SELECT f.gegevenKorting FROM Factuur f  WHERE f.id = 1");
 		Double result = (Double) query.getSingleResult();
 		return result;
 	}
@@ -65,10 +66,10 @@ class ReadDB implements Serializable{
 		return toReturn;
 	}
 
-	String getArtikel(Long factuurRegelNummer){
-		long nummer = factuurRegelNummer;
+	String getArtikel(FactuurRegel factuurRegel){
 		Query query = manager.createQuery(
-				"SELECT a.name FROM Artikel a JOIN FactuurRegel fr ON a.artikelId = fr.artikel Where factuurRegelId = :nummer");
+				//"SET @i := factuurRegel;" +
+						"SELECT artikelNaam FROM FactuurRegel Where factuurRegelId = 1");
 		String result = (String) query.getSingleResult();
 		return result;
 	}

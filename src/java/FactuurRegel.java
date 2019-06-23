@@ -21,6 +21,9 @@ public class FactuurRegel implements Serializable {
     @Column(name = "artikelnaam")
     private String artikelNaam;
 
+    @Column (name = "nummer")
+    private long nummer;
+
     public FactuurRegel(){}
 
     public FactuurRegel(Factuur factuur, Artikel artikel){
@@ -28,10 +31,10 @@ public class FactuurRegel implements Serializable {
         this.artikelNaam = artikel.getName();
     }
 
-    @Override
-    public String toString(){
+    public String toString(FactuurRegel factuurRegel){
         ReadDB readDB = new ReadDB();
         //return artikel.toString();
-        return readDB.getArtikel(factuurRegelId);
+        nummer = (factuurRegelId);
+        return readDB.getArtikel(factuurRegel);
     }
 }

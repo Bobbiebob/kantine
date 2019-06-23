@@ -243,6 +243,8 @@ public class KantineSumilation {
         for (String toPrint: topDrie) {
             System.out.println(toPrint);
         }
+        Factuur factuur = new Factuur();
+        System.out.println(factuur.toString());
     }
 
     private String[] genereerArtikelen(){

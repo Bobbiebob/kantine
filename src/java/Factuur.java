@@ -27,6 +27,8 @@ public class Factuur implements Serializable {
     @OneToMany(targetEntity = FactuurRegel.class, mappedBy = "factuur",cascade = CascadeType.ALL, orphanRemoval = true)
     private List<FactuurRegel> regels;
 
+    FactuurRegel factuurRegel = new FactuurRegel();
+
     public Factuur(){
         totaal = 0;
         gegevenKorting = 0;
@@ -107,7 +109,7 @@ public class Factuur implements Serializable {
                 "Datum: " + datum + ",\n" +
                 "Artikelen:\n\n";
         for(FactuurRegel regel:regels){
-            returnstring += regel.toString() + "\n";
+            returnstring += factuurRegel.toString(regel) + "\n";
         }
         returnstring+="gegeven korting: "+gegevenKorting+",\n" +
                 "totaal betaald: "+totaal;

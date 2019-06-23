@@ -15,21 +15,22 @@ public class FactuurRegel implements Serializable {
     @JoinColumn(name = "factuur_id")
     private Factuur factuur;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "artikel_id")
-    private Artikel artikel;
-
-    private ReadDB readDB = new ReadDB();
+//    @OneToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "artikel_id")
+//    private Artikel artikel;
+    @Column(name = "artikelnaam")
+    private String artikelNaam;
 
     public FactuurRegel(){}
 
     public FactuurRegel(Factuur factuur, Artikel artikel){
         this.factuur = factuur;
-        this.artikel = artikel;
+        this.artikelNaam = artikel.getName();
     }
 
     @Override
     public String toString(){
+        ReadDB readDB = new ReadDB();
         //return artikel.toString();
         return readDB.getArtikel(factuurRegelId);
     }

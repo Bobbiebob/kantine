@@ -1,7 +1,7 @@
 import javax.persistence.*;
 import java.io.Serializable;
 
-@Entity
+//@Entity
 @Table(name = "artikel")
 public class Artikel implements Serializable {
 
